@@ -1,4 +1,4 @@
-name: Formula 1 Docker Image
+name: Cryptographie Cours App Docker Image
 on:
   push:
     branches: [ "master" ]
