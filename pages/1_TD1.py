@@ -1,13 +1,49 @@
 import streamlit as st
 
+from models.td1.exercices import *
+from models.td1.solutions import *
+
 st.set_page_config(
     page_title='Introduction à la Cryptographie | TD1',
-    page_icon=':smile:',
+    page_icon=':student:',
     layout='wide'
 )
 st.markdown('<style> div.block-container {padding-top: 0.1rem;}</style>', unsafe_allow_html=True)
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
-st.title('Introduction à la cryptographie: TD1')
+st.markdown("""
+            <style>
+                .logos {
+                    background-color: white;
+                    height: 170px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-radius: 5px 5px 5px 5px;
+                }
+                
+            </style>
+            <div class="logos">
+              <img src="https://raw.githubusercontent.com/elghallali/my-images/master/Faculty%20Official/fsjest.jpg" title="fsjest" alt="fsjest" width="150" height="150" />
+              <img src="https://raw.githubusercontent.com/elghallali/my-images/master/Faculty%20Official/logo.png" title="DSDS" alt="DSDS" width="400" height="150"/>
+              <img src="https://raw.githubusercontent.com/elghallali/my-images/master/Faculty%20Official/uae.png" title="UAE" **alt="UAE" width="150" height="150" /> 
+            </div>
+    """,unsafe_allow_html=True)
+st.markdown("""
+            <style>
+                .main-title {
+                    text-align: center
+                }
+            </style>
+    <h1 class="main-title">Introduction à la cryptographie: <br>TD1</h>
+""",unsafe_allow_html=True)
 st.header('Congruences:')
 
 col_congrue = st.columns(5)
@@ -24,9 +60,9 @@ if st.session_state.Exercice1:
     st.subheader('Exercice 1:')
     Exercice1_tab_1, Exercice1_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice1_tab_1:
-        st.write('Instruction')
+        exercice1()
     with Exercice1_tab_2:
-        st.write('Solution')
+        solution_exercice1()
 
 ###############################################################################
 ###                                                                         ###
@@ -37,9 +73,9 @@ if st.session_state.Exercice2:
     st.subheader('Exercice 2:')
     Exercice2_tab_1, Exercice2_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice2_tab_1:
-        st.write('Instruction')
+        exercice2()
     with Exercice2_tab_2:
-        st.write('Solution')
+        solution_exercice2()
 
 
 ###############################################################################
@@ -51,9 +87,9 @@ if st.session_state.Exercice3:
     st.subheader('Exercice 3:')
     Exercice3_tab_1, Exercice3_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice3_tab_1:
-        st.write('Instruction')
+        exercice3()
     with Exercice3_tab_2:
-        st.write('Solution')
+        solution_exercice3()
 
 
 ###############################################################################
@@ -65,9 +101,9 @@ if st.session_state.Exercice4:
     st.subheader('Exercice 4:')
     Exercice4_tab_1, Exercice4_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice4_tab_1:
-        st.write('Instruction')
+        exercice4()
     with Exercice4_tab_2:
-        st.write('Solution')
+        solution_exercice4()
 
 
 ###############################################################################
@@ -79,13 +115,23 @@ if st.session_state.Exercice5:
     st.subheader('Exercice 5:')
     Exercice5_tab_1, Exercice5_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice5_tab_1:
-        st.write('Instruction')
+        exercice5()
     with Exercice5_tab_2:
-        st.write('Solution')
+        solution_exercice5()
 
 
 st.divider()
 st.header('Cryptographie de César')
+st.markdown("""
+<br>
+
+|A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|
+
+<br><br>
+""",unsafe_allow_html=True)
+
 col_crypto = st.columns(6)
 for i in range(6):
     with col_crypto[i]:
@@ -99,9 +145,9 @@ if st.session_state.Exercice6:
     st.subheader('Exercice 6:')
     Exercice6_tab_1, Exercice6_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice6_tab_1:
-        st.write('Instruction')
+        exercice6()
     with Exercice6_tab_2:
-        st.write('Solution')
+        solution_exercice6()
 
 
 
@@ -114,9 +160,9 @@ if st.session_state.Exercice7:
     st.subheader('Exercice 7:')
     Exercice7_tab_1, Exercice7_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice7_tab_1:
-        st.write('Instruction')
+        exercice7()
     with Exercice7_tab_2:
-        st.write('Solution')
+        solution_exercice7()
 
 
 ###############################################################################
@@ -128,9 +174,9 @@ if st.session_state.Exercice8:
     st.subheader('Exercice 8:')
     Exercice8_tab_1, Exercice8_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice8_tab_1:
-        st.write('Instruction')
+        exercice8()
     with Exercice8_tab_2:
-        st.write('Solution')
+        solution_exercice8()
 
 
 ###############################################################################
@@ -142,9 +188,9 @@ if st.session_state.Exercice9:
     st.subheader('Exercice 9:')
     Exercice9_tab_1, Exercice9_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice9_tab_1:
-        st.write('Instruction')
+        exercice9()
     with Exercice9_tab_2:
-        st.write('Solution')
+        solution_exercice9()
 
 
 ###############################################################################
@@ -156,9 +202,9 @@ if st.session_state.Exercice10:
     st.subheader('Exercice 10:')
     Exercice10_tab_1, Exercice10_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice10_tab_1:
-        st.write('Instruction')
+        exercice10()
     with Exercice10_tab_2:
-        st.write('Solution')
+        solution_exercice10()
 
 
 ###############################################################################
@@ -170,8 +216,8 @@ if st.session_state.Exercice11:
     st.subheader('Exercice 11:')
     Exercice11_tab_1, Exercice11_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice11_tab_1:
-        st.write('Instruction')
+        exercice11()
     with Exercice11_tab_2:
-        st.write('Solution')
+        solution_exercice11()
 
 
