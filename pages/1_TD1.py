@@ -42,7 +42,7 @@ st.markdown("""
                     text-align: center
                 }
             </style>
-    <h1 class="main-title">Introduction à la cryptographie: <br>TD1</h>
+    <h1 class="main-title">Introduction à la cryptographie: <br>TD1</h1>
 """,unsafe_allow_html=True)
 st.header('Congruences:')
 

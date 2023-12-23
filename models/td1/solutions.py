@@ -108,6 +108,12 @@ def solution_exercice3():
     > $\\text{donc:} \quad 2014 \\times 2015\\times2016  \equiv (-3) \\times (-2) \\times (-1)[2017]$          
     >            
     > $\implies \quad 2014 \\times 2015\\times2016  \equiv -6[2017]$           
+    >
+    > $\implies \quad 2014 \\times 2015 \\times 2016 = 2017 \\times q -6$ 
+    >
+    > $\implies \quad 2014  \\times 2015 \\times 2016 = 2017 \\times (q-1) +2017 -6$ 
+    >
+    > $\implies \quad 2014  \\times 2015 \\times 2016 = 2017 \\times (q-1) +2011 $
     >            
     > $\implies \quad 2014 \\times 2015\\times2016  \equiv 2011[2017]$           
     >      
