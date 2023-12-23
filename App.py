@@ -56,3 +56,11 @@ with home_cols[2]:
 
 with home_cols[3]:
     td3 = st.link_button("Allez à les exercices du TD3", "/TD3",use_container_width=True)
+
+st.markdown("""
+### Exercices qui j'ai fait:
+            
+>   #####  TD1: sauf exercice 11
+>            
+>   #####  TD2: les exercices de 1 à 5
+""",unsafe_allow_html=True)
