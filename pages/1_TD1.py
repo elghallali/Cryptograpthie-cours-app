@@ -11,7 +11,6 @@ st.set_page_config(
 )
 style()
 st.markdown("""
-            
             <div class="logos">
               <img src="https://raw.githubusercontent.com/elghallali/my-images/master/Faculty%20Official/fsjest.jpg" title="fsjest" alt="fsjest" width="150" height="150" />
               <img src="https://raw.githubusercontent.com/elghallali/my-images/master/Faculty%20Official/logo.png" title="DSDS" alt="DSDS" width="400" height="150"/>
@@ -19,11 +18,6 @@ st.markdown("""
             </div>
     """,unsafe_allow_html=True)
 st.markdown("""
-            <style>
-                .main-title {
-                    text-align: center
-                }
-            </style>
     <h1 class="main-title">Introduction à la cryptographie: <br>TD1</h1>
 """,unsafe_allow_html=True)
 st.header('Congruences:')
