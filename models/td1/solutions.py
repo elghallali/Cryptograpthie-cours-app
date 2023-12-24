@@ -1,5 +1,11 @@
 import streamlit as st
 
+
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 1 du TD1                     ###
+###                                                                         ###
+###############################################################################
 def solution_exercice1():
     st.markdown("""$\\text{Parmi les propositions, lesquelles sont vraies}$""")
     st.markdown("""1. $15 \equiv 7[8]:$ 
@@ -55,6 +61,12 @@ def solution_exercice1():
                 """)
 
 
+
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 2 du TD1                     ###
+###                                                                         ###
+###############################################################################
 def solution_exercice2():
     st.markdown("""$ \\text{Dans chacun des cas, on déterminons } x \\text{ modulo } n \\text{ (donnons un représentant dans } \Z/n\Z)$""")
     st.markdown("""1. $x = 555,\quad n = 12:$
@@ -85,6 +97,12 @@ def solution_exercice2():
 """)
 
 
+
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 3 du TD1                     ###
+###                                                                         ###
+###############################################################################
 def solution_exercice3():
     st.markdown("""#### $\\text{Simplifions les expressions suivantes:}$""")
     st.markdown("""1. $123^{122} \enspace modulo \enspace 124:$ 
@@ -184,6 +202,12 @@ def solution_exercice3():
                 """)
 
 
+
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 4 du TD1                     ###
+###                                                                         ###
+###############################################################################
 def solution_exercice4():
     solution_exercice4_col_1,solution_exercice4_col_2,solution_exercice4_col_3,solution_exercice4_col_4 = st.columns([1,4,4,1])
     with solution_exercice4_col_2:
@@ -214,6 +238,14 @@ def solution_exercice4():
 |$\dot{5}$|$\dot{0}$|$\dot{5}$|$\dot{3}$|$\dot{1}$|$\dot{6}$|$\dot{4}$|$\dot{2}$|
 |$\dot{6}$|$\dot{0}$|$\dot{6}$|$\dot{5}$|$\dot{6}$|$\dot{3}$|$\dot{2}$|$\dot{1}$|
 """)
+        
+
+
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 5 du TD1                     ###
+###                                                                         ###
+###############################################################################
 def solution_exercice5():
     solution_exercice5_col_1,solution_exercice5_col_2,solution_exercice5_col_3,solution_exercice5_col_4 = st.columns([1,4,4,1])
     with solution_exercice5_col_2:
@@ -248,6 +280,12 @@ $ \\text{La table de multiplication de }\\Z/8\\Z:$
 """)
 
 
+
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 6 du TD1                     ###
+###                                                                         ###
+###############################################################################
 def solution_exercice6():
     st.markdown("""$ \\text{On cryptons le mot MATHEMATIQUES par la méthode de César par paquet de 1 avec 19 comme clef:}$
 <center>
@@ -266,6 +304,12 @@ $\\text{Le message crypté du mot MATHEMATIQUES par la méthode de César par pa
 """,unsafe_allow_html=True)
 
 
+
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 7 du TD1                     ###
+###                                                                         ###
+###############################################################################
 def solution_exercice7():
     st.markdown("""$ \\text{On cryptons le mot ZEBRE par la méthode de César par paquet de 1 avec 25 comme clef.}$
 <center>
@@ -283,6 +327,12 @@ def solution_exercice7():
 $\\text{Le message crypté du mot ZEBRE par la méthode de César par paquet de 1 avec 25 comme clef est: YDAQD}$
 """,unsafe_allow_html=True)
 
+
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 8 du TD1                     ###
+###                                                                         ###
+###############################################################################
 def solution_exercice8():
     st.markdown("""$ \\text{On cryptons le message VIVELACRYPTO par la méthode de César par paquet de 3 avec 190091 comme clef.}$
 <center>
@@ -300,6 +350,11 @@ $\\text{Le message crypté du mot VIVELACRYPTO par la méthode de César par paq
 """,unsafe_allow_html=True)
 
 
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 9 du TD1                     ###
+###                                                                         ###
+###############################################################################
 def solution_exercice9():
     st.markdown("""$ \\text{On a utilisé la méthode de César par paquet de 1 avec 25 comme clef pour obtenir BDRSBGZTCBZAQTKD. On cherchons le message original ?}$
 <center>
@@ -318,6 +373,12 @@ $\\text{Le message original est : C'est chaud ça brule}$
 """,unsafe_allow_html=True)
 
 
+
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 10 du TD1                    ###
+###                                                                         ###
+###############################################################################
 def solution_exercice10():
     st.markdown(""" $\\text{On a utilisé la méthode de César par paquet de 3 avec 250025 comme clef pour obtenir 208907-107501-39318-48312-77499. On cherchons le message original ?}$
 <center>
@@ -336,5 +397,11 @@ $\\text{Le message original est : Voilà c'est fini}$
 """,unsafe_allow_html=True)
 
 
+
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 11 du TD1                    ###
+###                                                                         ###
+###############################################################################
 def solution_exercice11():
     pass

@@ -1,5 +1,8 @@
 import streamlit as st
 
+from models.td3.exercices import *
+from models.td3.solutions import *
+
 st.set_page_config(
     page_title='Introduction á la Cryptographie | TD3',
     page_icon=':student:',
@@ -57,9 +60,9 @@ if st.session_state.Exercice1:
     st.subheader('Exercice 1:')
     Exercice1_tab_1, Exercice1_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice1_tab_1:
-        st.write('Instruction')
+        exercice1()
     with Exercice1_tab_2:
-        st.write('Solution')
+        solution_exercice1()
 
 ###############################################################################
 ###                                                                         ###
@@ -70,9 +73,9 @@ if st.session_state.Exercice2:
     st.subheader('Exercice 2:')
     Exercice2_tab_1, Exercice2_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice2_tab_1:
-        st.write('Instruction')
+        exercice2()
     with Exercice2_tab_2:
-        st.write('Solution')
+        solution_exercice2()
 
 
 ###############################################################################
@@ -84,9 +87,9 @@ if st.session_state.Exercice3:
     st.subheader('Exercice 3:')
     Exercice3_tab_1, Exercice3_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice3_tab_1:
-        st.write('Instruction')
+        exercice3()
     with Exercice3_tab_2:
-        st.write('Solution')
+        solution_exercice3()
 st.divider()
 st.header('Hill:')
 col_hill = st.columns(5)
@@ -102,9 +105,9 @@ if st.session_state.Exercice4:
     st.subheader('Exercice 4:')
     Exercice4_tab_1, Exercice4_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice4_tab_1:
-        st.write('Instruction')
+        exercice4()
     with Exercice4_tab_2:
-        st.write('Solution')
+        solution_exercice4()
 
 
 ###############################################################################
@@ -116,9 +119,9 @@ if st.session_state.Exercice5:
     st.subheader('Exercice 5:')
     Exercice5_tab_1, Exercice5_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice5_tab_1:
-        st.write('Instruction')
+        exercice5()
     with Exercice5_tab_2:
-        st.write('Solution')
+        solution_exercice5()
 
 
 
@@ -132,9 +135,9 @@ if st.session_state.Exercice6:
     st.subheader('Exercice 6:')
     Exercice6_tab_1, Exercice6_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice6_tab_1:
-        st.write('Instruction')
+        exercice6()
     with Exercice6_tab_2:
-        st.write('Solution')
+        solution_exercice6()
 
 
 
@@ -147,9 +150,9 @@ if st.session_state.Exercice7:
     st.subheader('Exercice 7:')
     Exercice7_tab_1, Exercice7_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice7_tab_1:
-        st.write('Instruction')
+        exercice7()
     with Exercice7_tab_2:
-        st.write('Solution')
+        solution_exercice7()
 
 
 ###############################################################################
@@ -161,8 +164,8 @@ if st.session_state.Exercice8:
     st.subheader('Exercice 8:')
     Exercice8_tab_1, Exercice8_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice8_tab_1:
-        st.write('Instruction')
+        exercice8()
     with Exercice8_tab_2:
-        st.write('Solution')
+        solution_exercice8()
 
 

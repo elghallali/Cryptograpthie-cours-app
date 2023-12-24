@@ -1,5 +1,10 @@
 import streamlit as st
 
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 1 du TD2                     ###
+###                                                                         ###
+###############################################################################
 def solution_exercice1():
     st.markdown("""$\\text{Pour chacun des entiers } a\\text{, on déterminons } D(a) \\text{ l'ensemble des diviseurs positifs de }a.$""")
     st.markdown("""$1. \quad a = 99$
@@ -152,7 +157,11 @@ $\implies \quad D(99) = \{1,3,9,11,33,99\}$
 """,unsafe_allow_html=True)
 
     
-
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 2 du TD2                     ###
+###                                                                         ###
+###############################################################################
 def solution_exercice2():
     st.markdown("""$\\text{Dans chacun des cas suivant, On appliquons l'algorithme d'Euclide pour déterminer le PGCD de A et B.}$""")
     st.markdown("""$1. \quad A = 540, \quad B = 256$
@@ -263,7 +272,11 @@ def solution_exercice2():
 """,unsafe_allow_html=True)
 
 
-
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 3 du TD2                     ###
+###                                                                         ###
+###############################################################################
 def solution_exercice3():
     st.markdown("""$\\text{Dans chacun des cas, donnons l'inverse de } a \\text{ modulo } n \\text{ lorsque cela est possible.}$""")
     st.markdown("""$1. \quad a = 13, \quad n = 7$
@@ -410,7 +423,11 @@ def solution_exercice3():
                     """)
 
 
-
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 4 du TD2                     ###
+###                                                                         ###
+###############################################################################
 def solution_exercice4():
     st.markdown("""$\\text{Les couples suivants définissent-ils des clefs de cryptage affine par paquet de N}$
 """)
@@ -586,7 +603,11 @@ def solution_exercice4():
                 """)
 
 
-
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 5 du TD2                     ###
+###                                                                         ###
+###############################################################################
 def solution_exercice5():
     
     st.markdown("""$\\text{Les clefs valides de l'exercice 4 sont: }$
@@ -658,7 +679,11 @@ $3. \quad \\text{Pour } N = 3 :$
 """)
 
 
-
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 6 du TD2                     ###
+###                                                                         ###
+###############################################################################
 def solution_exercice6():
     st.markdown("""$\\text{On cryptons le message CHOCOBO par la méthode affine par paquet de 1 avec (7; 7) comme clef.}$
 
@@ -699,6 +724,12 @@ def solution_exercice6():
                 
                 """)
 
+
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 7 du TD2                     ###
+###                                                                         ###
+###############################################################################
 def solution_exercice7():
     st.markdown("""$\\text{On cryptons le message VACANCES par la méthode affine par paquet de 2 avec (1999; 999) comme clef.}$
 
@@ -742,6 +773,12 @@ def solution_exercice7():
                 """)
 
 
+
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 8 du TD2                     ###
+###                                                                         ###
+###############################################################################
 def solution_exercice8():
     st.markdown("""$\\text{On a utilisé le cryptosystème affine par paquet de 1 avec (7; 1) comme clef pour obtenir CBLXD. On retrouvons le message original.}$
 >
@@ -775,8 +812,20 @@ def solution_exercice8():
 > $\\text{Le message original est DOIGS}$
 """)
 
+
+###############################################################################
+###                                                                         ###
+###                     Solution de l'exercice 9 du TD2                     ###
+###                                                                         ###
+###############################################################################
 def solution_exercice9():
     pass
 
+
+###############################################################################
+###                                                                         ###
+###                    Solution de l'exercice 10 du TD2                     ###
+###                                                                         ###
+###############################################################################
 def solution_exercice10():
     pass
