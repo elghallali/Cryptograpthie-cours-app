@@ -660,13 +660,120 @@ $3. \quad \\text{Pour } N = 3 :$
 
 
 def solution_exercice6():
-    pass
+    st.markdown("""$\\text{On cryptons le message CHOCOBO par la méthode affine par paquet de 1 avec (7; 7) comme clef.}$
+
+> ##### $\\text{Rappel: Chiffrement affine par paquet de 1}$               
+>                
+> $\qquad \\text{Soient } x \in \\Z/26\\Z \\text{ et } (a,b) \in (\\Z/26\\Z)^{*} \\times \\Z/26\\Z , \quad y \equiv ax + b[26]$               
+>                
+> ---  
+>             
+>  $\quad \\text{On applique l'algorithme d'Euclide étendu}$                      
+>                       
+> |$a$|$b$|$r$|$q$|$u$|$v$|                      
+> |:---:|:---:|:---:|:---:|:---:|:---:|                      
+> |$26$|$7$|$5$|$3$|$3$|$-11$|                      
+> |$7$|$5$|$2$|$1$|$-2$|$3$|                      
+> |$5$|$2$|$\colorbox{aqua}{1}$|$2$|$1$|$-2$|                      
+> |$2$|$1$|$0$|$2$|$0$|$1$|                       
+>                       
+> $\!$ 
+>                              
+> $\implies PGCD(26,7) = 1 \implies 26 \\times 3 + 7 \\times (-11) \equiv 1[26]  \implies 7 \\times (-11) \equiv 1[26]$                             
+>                              
+> $\\text{On a: } \quad -11 \equiv 26-11[26] \quad \implies  -11 \equiv 15[26] \quad \implies 7 \\times 15 \equiv 1[26]$                             
+>                              
+> $\implies 7 \in (\\Z/26\\Z)^*$                             
+>                              
+> |$x$|$C$|$H$|$O$|$C$|$O$|$B$|$O$|               
+> |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|               
+> |$\\Z/26\\Z$|$2$|$7$|$14$|$2$|$14$|$1$|$14$|               
+> |$7x + 7$|$21$|$56$|$105$|$21$|$105$|$14$|$105$|               
+> |$\\Z/26\\Z$|$21$|$20$|$1$|$21$|$1$|$14$|$1$|               
+> |$y$|$V$|$U$|$B$|$V$|$B$|$O$|$B$|               
+>                
+> $\!$               
+>                
+> $\\text{Le message crypté du message CHOCOBO par la méthode affine par paquet de 1 avec (7; 7) comme clef est: VUBVBOB.}$               
+>                
+                
+                """)
 
 def solution_exercice7():
-    pass
+    st.markdown("""$\\text{On cryptons le message VACANCES par la méthode affine par paquet de 2 avec (1999; 999) comme clef.}$
+
+> ##### $\\text{Rappel: Chiffrement affine par paquet de 2}$               
+>                
+> $\qquad \\text{Soient } x \in \\Z/2526\\Z \\text{ et } (a,b) \in (\\Z/2526\\Z)^{*} \\times \\Z/2526\\Z , \quad y \equiv ax + b[2526]$               
+>                
+> ---
+>
+> $\quad \\text{On applique l'algorithme d'Euclide étendu}$                      
+>                       
+> |$a$|$b$|$r$|$q$|$u$|$v$|                      
+> |:---:|:---:|:---:|:---:|:---:|:---:|                      
+> |$2526$|$1999$|$527$|$1$|$-110$|$139$|                      
+> |$1999$|$527$|$418$|$3$|$29$|$-110$|                      
+> |$527$|$418$|$109$|$1$|$-23$|$29$|                      
+> |$418$|$109$|$91$|$3$|$6$|$-23$|                      
+> |$109$|$91$|$18$|$1$|$-5$|$6$|                      
+> |$91$|$18$|$\colorbox{aqua}{1}$|$5$|$1$|$-5$|                      
+> |$18$|$1$|$0$|$18$|$0$|$1$|                       
+>                       
+> $\!$                      
+>                       
+> $\implies PGCD(2526,1999) = 1 \implies 2526 \\times (-110) + 1999 \\times 139 \equiv 1[2526]  \implies 1999 \\times 139 \equiv 1[2526]$                      
+>                       
+> $\implies \quad 1999 \in (\\Z/2526\\Z)^{*}$                      
+>                       
+> |$x$|$VA$|$CA$|$NC$|$ES$|              
+> |:---:|:---:|:---:|:---:|:---:|               
+> |$\\Z/2526\\Z$|$2100$|$200$|$1302$|$418$|               
+> |$1999x + 999$|$4198899$|$400799$|$2603697$|$836581$|               
+> |$\\Z/2526\\Z$|$687$|$1691$|$1917$|$475$|               
+> |$y$|$687$|$1691$|$1917$|$475$|
+>                      
+> $\!$               
+>                
+> $\\text{Le message crypté du message VACANCES par la méthode affine par paquet de 2 avec (1999; 999) comme clef. est: 687-1691-1917-475}$                     
+>                      
+>                      
+>                      
+                """)
+
 
 def solution_exercice8():
-    pass
+    st.markdown("""$\\text{On a utilisé le cryptosystème affine par paquet de 1 avec (7; 1) comme clef pour obtenir CBLXD. On retrouvons le message original.}$
+>
+>$\quad \\text{On applique l'algorithme d'Euclide étendu}$                      
+>                       
+> |$a$|$b$|$r$|$q$|$u$|$v$|                      
+> |:---:|:---:|:---:|:---:|:---:|:---:|                      
+> |$26$|$7$|$5$|$3$|$3$|$-11$|                      
+> |$7$|$5$|$2$|$1$|$-2$|$3$|                      
+> |$5$|$2$|$\colorbox{aqua}{1}$|$2$|$1$|$-2$|                      
+> |$2$|$1$|$0$|$2$|$0$|$1$|                       
+>                       
+> $\!$ 
+>                              
+> $\implies PGCD(26,7) = 1 \implies 26 \\times 3 + 7 \\times (-11) \equiv 1[26]  \implies 7 \\times (-11) \equiv 1[26]$                             
+>                              
+> $\\text{On a: } \quad -11 \equiv 26-11[26] \quad \implies  -11 \equiv 15[26] \quad \implies 7 \\times 15 \equiv 1[26]$                             
+>                              
+> $\implies 7 \in (\\Z/26\\Z)^* \quad \\text{et 15 est l'inverse de 7 modulo 26}$
+>
+>
+> |$y$|$C$|$B$|$L$|$X$|$D$|
+> |:---:|:---:|:---:|:---:|:---:|:---:|
+> |$\\Z/26\\Z$|$2$|$1$|$11$|$23$|$3$|
+> |$15(y-1)$|$29$|$14$|$164$|$344$|$44$|
+> |$\\Z/26\\Z$|$3$|$14$|$8$|$6$|$18$|
+> |$x$|$D$|$O$|$I$|$G$|$S$|
+>
+> $\!$
+>
+> $\\text{Le message original est DOIGS}$
+""")
 
 def solution_exercice9():
     pass
