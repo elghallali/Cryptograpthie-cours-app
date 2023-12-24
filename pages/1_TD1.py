@@ -2,6 +2,7 @@ import streamlit as st
 
 from models.td1.exercices import *
 from models.td1.solutions import *
+from style.style import style
 
 st.set_page_config(
     page_title='Introduction à la Cryptographie | TD1',
@@ -17,97 +18,9 @@ hide_st_style = """
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
-
+style()
 st.markdown("""
-            <style>
-                
-                .logos {
-                    background-color: #fff;
-                    height: 6em;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    border-radius: 5px 5px 5px 5px;
-                }
-                .logos img:nth-child(odd) {
-                    width:5em;
-                    height: 90%;
-        
-                }
-        
-                .logos img:nth-child(even) {
-                    width:12em;
-                    height: 90%;
-                }
-                
             
-                @media screen and (min-width: 780px) {
-                    .logos {
-                        background-color: #000;
-                        height: 8em;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        border-radius: 5px 5px 5px 5px;
-                    }
-
-                    .logos img:nth-child(odd) {
-                        width:8em;
-                        height: 90%;
-            
-                    }
-            
-                    .logos img:nth-child(even) {
-                        width:20em;
-                        height: 90%;
-                    }
-                }
-            
-                @media screen and (min-width: 992px) {
-                    .logos {
-                        background-color: #009;
-                        height: 8em;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        border-radius: 5px 5px 5px 5px;
-                    }
-
-                    .logos img:nth-child(odd) {
-                        width:8em;
-                        height: 90%;
-            
-                    }
-            
-                    .logos img:nth-child(even) {
-                        width:20em;
-                        height: 90%;
-                    }
-                }
-            
-                @media screen and (min-width: 1200px) {
-                    .logos {
-                        background-color: #080;
-                        height: 8em;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        border-radius: 5px 5px 5px 5px;
-                    }
-
-                    .logos img:nth-child(odd) {
-                        width:8em;
-                        height: 90%;
-            
-                    }
-            
-                    .logos img:nth-child(even) {
-                        width:20em;
-                        height: 90%;
-                    }
-                }
-                
-            </style>
             <div class="logos">
               <img src="https://raw.githubusercontent.com/elghallali/my-images/master/Faculty%20Official/fsjest.jpg" title="fsjest" alt="fsjest" width="150" height="150" />
               <img src="https://raw.githubusercontent.com/elghallali/my-images/master/Faculty%20Official/logo.png" title="DSDS" alt="DSDS" width="400" height="150"/>
