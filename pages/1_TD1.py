@@ -123,14 +123,30 @@ if st.session_state.Exercice5:
 st.divider()
 st.header('Cryptographie de César')
 st.markdown("""
+<style>
+thead {
+    background-color: #000;
+    color: white;
+}
+tbody tr:nth-child(2) {
+    background-color: #000;
+    color: white;
+}
+tbody tr:nth-child(odd) {
+    background-color: #333;
+    color: white;
+}
+</style>
 <br>
-
+<center>
+            
 |$A$|$B$|$C$|$D$|$E$|$F$|$G$|$H$|$I$|$J$|$K$|$L$|$M$|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |$0$|$1$|$2$|$3$|$4$|$5$|$6$|$7$|$8$|$9$|$10$|$11$|$12$|
 |$N$|$O$|$P$|$Q$|$R$|$S$|$T$|$U$|$V$|$W$|$X$|$Y$|$Z$|
 |$13$|$14$|$15$|$16$|$17$|$18$|$19$|$20$|$21$|$22$|$23$|$24$|$25$|
-            
+
+</center>                        
 <br><br>
 """,unsafe_allow_html=True)
 
