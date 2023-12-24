@@ -20,18 +20,31 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 
 st.markdown("""
             <style>
+                
                 .logos {
-                    background-color: white;
-                    height: 170px;
+                    background-color: #fff;
+                    height: 6em;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     border-radius: 5px 5px 5px 5px;
                 }
-                @media screen and (max-width: 480px) {
+                .logos img:nth-child(odd) {
+                    width:5em;
+                    height: 90%;
+        
+                }
+        
+                .logos img:nth-child(even) {
+                    width:12em;
+                    height: 90%;
+                }
+                
+            
+                @media screen and (min-width: 780px) {
                     .logos {
-                        background-color: #fff;
-                        height: 5em;
+                        background-color: #000;
+                        height: 8em;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
@@ -39,14 +52,58 @@ st.markdown("""
                     }
 
                     .logos img:nth-child(odd) {
-                        width:20%;
-                        height: 100%;
+                        width:8em;
+                        height: 90%;
             
                     }
             
                     .logos img:nth-child(even) {
-                        width:40%;
-                        height: 100%;
+                        width:20em;
+                        height: 90%;
+                    }
+                }
+            
+                @media screen and (min-width: 992px) {
+                    .logos {
+                        background-color: #009;
+                        height: 8em;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        border-radius: 5px 5px 5px 5px;
+                    }
+
+                    .logos img:nth-child(odd) {
+                        width:8em;
+                        height: 90%;
+            
+                    }
+            
+                    .logos img:nth-child(even) {
+                        width:20em;
+                        height: 90%;
+                    }
+                }
+            
+                @media screen and (min-width: 1200px) {
+                    .logos {
+                        background-color: #080;
+                        height: 8em;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        border-radius: 5px 5px 5px 5px;
+                    }
+
+                    .logos img:nth-child(odd) {
+                        width:8em;
+                        height: 90%;
+            
+                    }
+            
+                    .logos img:nth-child(even) {
+                        width:20em;
+                        height: 90%;
                     }
                 }
                 
