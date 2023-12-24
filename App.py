@@ -19,11 +19,9 @@ st.markdown("""
     """,unsafe_allow_html=True)
 st.markdown("""
 <div class="main-title">
-<h1 >Introduction à la cryptographie:  Exercices</h1>
+    <h1>Introduction à la cryptographie:  Exercices</h1>
     <h3>Réalisé par Yassine EL GHALLALI</h3>
 </div>
-            
-
 <br><br>
 """,unsafe_allow_html=True)
 
