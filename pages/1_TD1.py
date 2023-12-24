@@ -28,6 +28,27 @@ st.markdown("""
                     align-items: center;
                     border-radius: 5px 5px 5px 5px;
                 }
+                @media screen and (max-width: 480px) {
+                    .logos {
+                        background-color: #fff;
+                        height: 5em;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        border-radius: 5px 5px 5px 5px;
+                    }
+
+                    .logos img:nth-child(odd) {
+                        width:20%;
+                        height: 100%;
+            
+                    }
+            
+                    .logos img:nth-child(even) {
+                        width:40%;
+                        height: 100%;
+                    }
+                }
                 
             </style>
             <div class="logos">
