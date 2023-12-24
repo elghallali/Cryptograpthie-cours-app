@@ -9,7 +9,6 @@ st.set_page_config(
     page_icon=':student:',
     layout='wide'
 )
-st.markdown('<style> div.block-container {padding-top: 0.1rem;}</style>', unsafe_allow_html=True)
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
