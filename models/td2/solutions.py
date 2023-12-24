@@ -38,7 +38,7 @@ $\implies \quad D(99) = \{1,3,9,11,33,99\}$
 > $Si \quad  p | 1069 \implies p \in \{2, 3, 5,7,11,13,17,19,23,29,31\}$
 >                
 > -  $9 = 2 \\times 4 + 1 =2k +1 \\not = 2k \implies p \\not = 2 $
-> - $ 1 + 0 + 6 + 9 = 16 \quad et \quad 1 + 6 = 7 \\not = 3,6 \\text{ ou } 9 \implies p \\not 3$
+> - $ 1 + 0 + 6 + 9 = 16 \quad et \quad 1 + 6 = 7 \\not = 3,6 \\text{ ou } 9 \implies p \\not = 3$
 > - $9 \\not = 0 \quad et \quad 9 \\not = 5 \implies p \\not = 5$
 > - $1069 = 7 \\times 152 + 5 \implies p \\not = 7$
 > - $1069 = 11 \\times 97 + 2 \implies p \\not = 11$
