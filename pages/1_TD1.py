@@ -128,7 +128,7 @@ thead {
     background-color: #000;
     color: white;
 }
-tbody tr:nth-child(2) {
+tbody tr:nth-child(even) {
     background-color: #000;
     color: white;
 }
