@@ -3,8 +3,19 @@ import streamlit as st
 
 def style():
     st.markdown("""
-        <style>
-                
+        <style> 
+            @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+            html, body, [class*="css"] {
+                font-family: 'PT Serif', serif; 
+                font-size: 20px;
+                font-weight: 500;
+                color: #091747;
+            }
+            
+            h1, h2, h3, h4, h5, h6, button p {
+                font-family: 'PT Serif', serif;
+            }           
             div.block-container {padding-top: 0.1rem;}
                 
             #MainMenu {visibility: hidden;}
@@ -21,8 +32,9 @@ def style():
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                box-shadow: 0 4px 8px 0 rgba(0, 200, 200, 0.2), 0 6px 20px 0 rgba(0, 212, 0, 0.19);
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                 border-radius: 5px 5px 5px 5px;
+                margin-bottom: 30px;
             }
                 
             .logos img:nth-child(odd) {
@@ -32,7 +44,7 @@ def style():
             }
     
             .logos img:nth-child(even) {
-                width:12em;
+                width:8em;
                 height: 90%;
             }
             
@@ -75,15 +87,16 @@ def style():
                 .logos {
                     height: 12em;
                     
+                    
                 }
                 .logos img:nth-child(odd) {
                     width:12em;
-                    
-        
+                    height: 80%;
                 }
         
                 .logos img:nth-child(even) {
-                    width:30em;
+                    width:20em;
+                    height: 70%;
                    
                 }
             }
