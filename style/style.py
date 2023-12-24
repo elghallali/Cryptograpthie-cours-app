@@ -13,7 +13,7 @@ def style():
                 color: #091747;
             }
             
-            h1, h2, h3, h4, h5, h6, button p {
+            h1, h2, h3, h4, h5, h6, button p, a p {
                 font-family: 'PT Serif', serif;
             }           
             div.block-container {padding-top: 0.1rem;}
