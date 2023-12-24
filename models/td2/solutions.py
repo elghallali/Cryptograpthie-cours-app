@@ -15,7 +15,7 @@ def solution_exercice1():
         <span>1</span>
         <br>
     </div>
-    <div style="border-left: 2px solid black; padding-left: 5px; text-align: start;">
+    <div style="border-left: 4px solid red; padding-left: 5px; text-align: start;">
         <span>3</span>
         <br>
         <span>3</span>
@@ -66,7 +66,7 @@ $\implies \quad D(99) = \{1,3,9,11,33,99\}$
         <span>1</span>
         <br>
     </div>
-    <div style="border-left: 2px solid black; padding-left: 5px; text-align: start;">
+    <div style="border-left: 4px solid red; padding-left: 5px; text-align: start;">
         <span>2</span>
         <br>
         <span>1871</span>
@@ -94,7 +94,7 @@ $\implies \quad D(99) = \{1,3,9,11,33,99\}$
         <span>1</span>
         <br>
     </div>
-    <div style="border-left: 2px solid black; padding-left: 5px; text-align: start;">
+    <div style="border-left: 4px solid red; padding-left: 5px; text-align: start;">
         <span>5</span>
         <br>
         <span>5</span>
@@ -129,7 +129,7 @@ $\implies \quad D(99) = \{1,3,9,11,33,99\}$
         <span>1</span>
         <br>
     </div>
-    <div style="border-left: 2px solid black; padding-left: 5px; text-align: start;">
+    <div style="border-left: 4px solid red; padding-left: 5px; text-align: start;">
         <span>2</span>
         <br>
         <span>2</span>
