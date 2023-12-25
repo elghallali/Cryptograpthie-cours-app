@@ -1,6 +1,6 @@
 # app/Dockerfile
 
-FROM python:alpine
+FROM python:3.12-slim
 
 # Set the working directory to /app
 WORKDIR /app
