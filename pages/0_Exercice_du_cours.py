@@ -1,5 +1,9 @@
 import streamlit as st
+from models.cours.arithmetiqueModulaire.exercices import *
 from models.cours.arithmetiqueZ.exercices import *
+from models.cours.chiffrementAffine.exercices import affine_exercice1
+from models.cours.chiffrementPuissance.exercices import puissance_exercice1
+from models.cours.cryptographieSymetrique.exercices import *
 from models.cours.exercices import *
 from style.style import style
 
@@ -328,7 +332,7 @@ if st.session_state.Exercice20:
 st.divider()
 st.header('Arithmétique modulaire:')
 col_arithmetique_modulaire = st.columns(5)
-for i in range(4):
+for i in range(5):
         with col_arithmetique_modulaire[i]:
             st.button(f"Exercice {i+1}",key=f'Exercice_modulaire{i+1}',use_container_width=True)
 
@@ -342,7 +346,7 @@ if st.session_state.Exercice_modulaire1:
     st.subheader('Exercice 1:')
     Exercice1_tab_1, Exercice1_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice1_tab_1:
-        st.text('Instraction')
+        modulaire_exercice1()
     with Exercice1_tab_2:
         st.text('solution')
 
@@ -355,7 +359,7 @@ if st.session_state.Exercice_modulaire2:
     st.subheader('Exercice 2:')
     Exercice2_tab_1, Exercice2_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice2_tab_1:
-        st.text('Instraction')
+        modulaire_exercice2()
     with Exercice2_tab_2:
         st.text('solution')
 
@@ -369,7 +373,7 @@ if st.session_state.Exercice_modulaire3:
     st.subheader('Exercice 3:')
     Exercice3_tab_1, Exercice3_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice3_tab_1:
-        st.text('Instraction')
+        modulaire_exercice3()
     with Exercice3_tab_2:
         st.text('solution')
 
@@ -383,9 +387,23 @@ if st.session_state.Exercice_modulaire4:
     st.subheader('Exercice 4:')
     Exercice4_tab_1, Exercice4_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice4_tab_1:
-       st.text('Instraction')
+       modulaire_exercice4()
     with Exercice4_tab_2:
-        st.text('solution')            
+        st.text('solution')
+
+
+###############################################################################
+###                                                                         ###
+###                             Exercice 5                                  ###
+###                                                                         ###
+###############################################################################
+if st.session_state.Exercice_modulaire5:
+    st.subheader('Exercice 5:')
+    Exercice5_tab_1, Exercice5_tab_2 = st.tabs(['Instruction', 'Solution'])
+    with Exercice5_tab_1:
+       modulaire_exercice5()
+    with Exercice5_tab_2:
+        st.text('solution')           
 
 
 ###############################################################################
@@ -410,7 +428,7 @@ if st.session_state.Exercice_cryptographie_symetrique1:
     st.subheader('Exercice 1:')
     Exercice1_tab_1, Exercice1_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice1_tab_1:
-        st.text('Instraction')
+        symetrique_exercice1()
     with Exercice1_tab_2:
         st.text('solution')
 
@@ -423,7 +441,7 @@ if st.session_state.Exercice_cryptographie_symetrique2:
     st.subheader('Exercice 2:')
     Exercice2_tab_1, Exercice2_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice2_tab_1:
-        st.text('Instraction')
+        symetrique_exercice2()
     with Exercice2_tab_2:
         st.text('solution')
 
@@ -450,7 +468,7 @@ if st.session_state.Exercice_chiffrement_affine1:
     st.subheader('Exercice 1:')
     Exercice1_tab_1, Exercice1_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice1_tab_1:
-        st.text('Instraction')
+        affine_exercice1()
     with Exercice1_tab_2:
         st.text('solution')
 
@@ -478,7 +496,7 @@ if st.session_state.Exercice_chiffrement_puissance1:
     st.subheader('Exercice 1:')
     Exercice1_tab_1, Exercice1_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice1_tab_1:
-        st.text('Instraction')
+        puissance_exercice1()
     with Exercice1_tab_2:
         st.text('solution')
 
