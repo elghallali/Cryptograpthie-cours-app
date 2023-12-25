@@ -223,7 +223,12 @@ def solution_exercice4():
 |$4$|$4$|$5$|$6$|$0$|$1$|$2$|$3$|
 |$5$|$5$|$6$|$0$|$1$|$2$|$3$|$4$|
 |$6$|$6$|$0$|$1$|$2$|$3$|$4$|$5$|
-""")
+                    
+
+<br>                    
+""",unsafe_allow_html=True)
+        
+        
     with solution_exercice4_col_3:
         st.markdown("""
                     $ \\text{La table de multiplication de }\\Z/7\\Z:$
@@ -237,7 +242,10 @@ def solution_exercice4():
 |$4$|$0$|$4$|$\colorbox{Purple}{1}$|$5$|$2$|$6$|$3$|
 |$5$|$0$|$5$|$3$|$\colorbox{Purple}{1}$|$6$|$4$|$2$|
 |$6$|$0$|$6$|$5$|$6$|$3$|$2$|$\colorbox{Purple}{1}$|
-""")
+                    
+
+<br>                    
+""",unsafe_allow_html=True)
         
 
 
@@ -262,7 +270,9 @@ def solution_exercice5():
 |$5$|$5$|$6$|$7$|$0$|$1$|$2$|$3$|$4$|
 |$6$|$6$|$7$|$0$|$1$|$2$|$3$|$4$|$5$|
 |$7$|$7$|$0$|$1$|$2$|$3$|$4$|$5$|$6$|
-""")
+
+<br>                    
+""",unsafe_allow_html=True)
     with solution_exercice5_col_3:
         st.markdown("""
 $ \\text{La table de multiplication de }\\Z/8\\Z:$                    
@@ -277,7 +287,9 @@ $ \\text{La table de multiplication de }\\Z/8\\Z:$
 |$5$|$0$|$5$|$2$|$7$|$4$|$\colorbox{Purple}{1}$|$6$|$3$|
 |$6$|$0$|$6$|$4$|$2$|$0$|$6$|$4$|$2$|
 |$7$|$0$|$7$|$6$|$5$|$4$|$3$|$2$|$\colorbox{Purple}{1}$|
-""")
+
+<br>                    
+""",unsafe_allow_html=True)
 
 
 
