@@ -1,6 +1,6 @@
 # app/Dockerfile
 
-FROM python::alpine
+FROM python:alpine
 
 WORKDIR /app
 
