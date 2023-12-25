@@ -27,21 +27,21 @@ st.markdown("""
 
 home_cols = st.columns(4)
 with home_cols[0]:
-    exercice_cours = st.link_button("Allez à les exercices du cours", "/Exercice_du_cours",use_container_width=True)
+    exercice_cours = st.link_button("Exercices du cours", "/Exercice_du_cours",use_container_width=True)
 
 with home_cols[1]:
-    td1 = st.link_button("Allez à les exercices du TD1", "/TD1",use_container_width=True)
+    td1 = st.link_button("Exercices du TD1", "/TD1",use_container_width=True)
 
 with home_cols[2]:
-    td2 = st.link_button("Allez à les exercices du TD2", "/TD2",use_container_width=True)
+    td2 = st.link_button("Exercices du TD2", "/TD2",use_container_width=True)
 
 with home_cols[3]:
-    td3 = st.link_button("Allez à les exercices du TD3", "/TD3",use_container_width=True)
+    td3 = st.link_button("Exercices du TD3", "/TD3",use_container_width=True)
 
 st.markdown("""
 ### Exercices qui j'ai fait:
             
->   #####  TD1: sauf exercice 11
+>   ######  TD1: sauf exercice 11
 >            
->   #####  TD2: les exercices de 1 à 8
+>   ######  TD2: les exercices de 1 à 8
 """,unsafe_allow_html=True)

@@ -31,7 +31,7 @@ st.markdown("""
 ###                                                                         ###
 ###############################################################################
 
-st.subheader('Arithmétique de $\\Z$:')
+st.header('Arithmétique de $\\Z$:')
 for j in range(4):
     col_arithmetique = st.columns(5)
     for i in range(5):
@@ -325,7 +325,7 @@ if st.session_state.Exercice20:
 ###############################################################################
 
 st.divider()
-st.subheader('Arithmétique modulaire:')
+st.header('Arithmétique modulaire:')
 col_arithmetique_modulaire = st.columns(5)
 for i in range(4):
         with col_arithmetique_modulaire[i]:
@@ -386,8 +386,14 @@ if st.session_state.Exercice_modulaire4:
     with Exercice4_tab_2:
         st.text('solution')            
 
+
+###############################################################################
+###                                                                         ###
+###                         Cryptographie symétrique                        ###
+###                                                                         ###
+###############################################################################
 st.divider()
-st.subheader('Cryptographie symétrique:')
+st.header('Cryptographie symétrique:')
 col_cryptographie_symetrique = st.columns(5)
 for i in range(2):
         with col_cryptographie_symetrique[i]:
@@ -421,8 +427,13 @@ if st.session_state.Exercice_cryptographie_symetrique2:
         st.text('solution')
 
 
+###############################################################################
+###                                                                         ###
+###                            Chiffrement affine                           ###
+###                                                                         ###
+###############################################################################
 st.divider()
-st.subheader('Chiffrement affine:')
+st.header('Chiffrement affine:')
 col_chiffrement_affine = st.columns(5)
 for i in range(1):
         with col_chiffrement_affine[i]:
@@ -443,8 +454,14 @@ if st.session_state.Exercice_chiffrement_affine1:
         st.text('solution')
 
 
+
+###############################################################################
+###                                                                         ###
+###                           Chiffrement puissance                         ###
+###                                                                         ###
+###############################################################################
 st.divider()
-st.subheader('Chiffrement puissance:')
+st.header('Chiffrement puissance:')
 col_chiffrement_puissance = st.columns(5)
 for i in range(1):
         with col_chiffrement_puissance[i]:
@@ -465,8 +482,14 @@ if st.session_state.Exercice_chiffrement_puissance1:
         st.text('solution')
 
 
+
+###############################################################################
+###                                                                         ###
+###                          Exercices d'ordinateur                         ###
+###                                                                         ###
+###############################################################################
 st.divider()
-st.subheader("Exercice d'ordinateur:")
+st.header("Exercices d'ordinateur:")
 col_exercice_ordinateur = st.columns(5)
 for i in range(3):
         with col_exercice_ordinateur[i]:
