@@ -3,7 +3,7 @@ import streamlit as st
 
 def modulaire_exercice1():
     st.markdown("""
-$\\text{Montrez que} 7 \enspace \\text{et} \enspace 14 \\text{sont dans la même} \enspace$
+$\\text{Montrez que} \enspace 7 \enspace \\text{et} \enspace 14 \enspace \\text{sont dans la même} \enspace$
 $\\text{classe modulo 2.}$                
 """)
 
