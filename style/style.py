@@ -54,13 +54,13 @@ def style():
                     
                 }
                 .logos img:nth-child(odd) {
-                    width:8em;
+                    width:7em;
                     
         
                 }
         
                 .logos img:nth-child(even) {
-                    width:20em;
+                    width:15em;
                     
                 }
             }
@@ -72,13 +72,13 @@ def style():
                     
                 }
                 .logos img:nth-child(odd) {
-                    width:10em;
+                    width:9em;
                     
         
                 }
         
                 .logos img:nth-child(even) {
-                    width:25em;
+                    width:22em;
                     
                 }
             }
@@ -90,7 +90,7 @@ def style():
                     
                 }
                 .logos img:nth-child(odd) {
-                    width:12em;
+                    width:9em;
                     height: 80%;
                 }
         
