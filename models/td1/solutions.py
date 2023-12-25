@@ -290,12 +290,12 @@ def solution_exercice6():
     st.markdown("""$ \\text{On cryptons le mot MATHEMATIQUES par la méthode de César par paquet de 1 avec 19 comme clef:}$
 <center>
                 
-|$x \longrightarrow$|M|A|T|H|E|M|A|T|I|Q|U|E|S|
+|$x \longrightarrow$|$M$|$A$|$T$|$H$|$E$|$M$|$A$|$T$|$I$|$Q$|$U$|$E$|$S$|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|$\\Z/26\\Z$|12|0|19|7|4|12|0|19|8|16|20|4|18|
-|$+19$|31|19|38|26|23|31|19|38|27|35|39|23|37|
-|$\\Z/26\\Z$|5|19|12|0|23|5|19|12|1|9|13|23|11|
-|$Cr(x) \longrightarrow$|F|T|M|A|X|F|T|M|B|J|N|X|L|
+|$\\Z/26\\Z$|$12$|$0$|$19$|$7$|$4$|$12$|$0$|$19$|$8$|$16$|$20$|$4$|$18$|
+|$+19$|$31$|$19$|$38$|$26$|$23$|$31$|$19$|$38$|$27$|$35$|$39$|$23$|$37$|
+|$\\Z/26\\Z$|$5$|$19$|$12$|$0$|$23$|$5$|$19$|$12$|$1$|$9$|$13$|$23$|$11$|
+|$Cr(x) \longrightarrow$|$F$|$T$|$M$|$A$|$X$|$F$|$T$|$M$|$B$|$J$|$N$|$X$|$L$|
 
 </center>
 <br>
@@ -314,12 +314,12 @@ def solution_exercice7():
     st.markdown("""$ \\text{On cryptons le mot ZEBRE par la méthode de César par paquet de 1 avec 25 comme clef.}$
 <center>
                 
-|$x \longrightarrow$|Z|E|B|R|E|
+|$x \longrightarrow$|$Z$|$E$|$B$|$R$|$E$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|$\\Z/26\\Z$|25|4|1|17|4|
-|$+25$|50|29|26|42|29|
-|$\\Z/26\\Z$|24|3|0|16|3|
-|$Cr(x) \longrightarrow$|Y|D|A|Q|D|
+|$\\Z/26\\Z$|$25$|$4$|$1$|$17$|$4$|
+|$+25$|$50$|$29$|$26$|$42$|$29$|
+|$\\Z/26\\Z$|$24$|$3$|$0$|$16$|$3$|
+|$Cr(x) \longrightarrow$|$Y$|$D$|$A$|$Q$|$D$|
 
 </center>
 <br>
@@ -337,12 +337,12 @@ def solution_exercice8():
     st.markdown("""$ \\text{On cryptons le message VIVELACRYPTO par la méthode de César par paquet de 3 avec 190091 comme clef.}$
 <center>
                 
-|$x \longrightarrow$| VIV | ELA | CRY | PTO |
+|$x \longrightarrow$| $VIV$ | $ELA$ | $CRY$ | $PTO$ |
 |:---:|:---:|:---:|:---:|:---:|
-|$\\Z/252526\\Z$|210821|041100|021724|151914|
-|$+190091$|400912|231191|211815|342005|
-|$\\Z/252526\\Z$|148386|231191|211815|89479|
-|$Cr(x) \longrightarrow$|148386|231191|211815|89479|
+|$\\Z/252526\\Z$|$210821$|$041100$|$021724$|$151914$|
+|$+190091$|$400912$|$231191$|$211815$|$342005$|
+|$\\Z/252526\\Z$|$148386$|$231191$|$211815$|$89479$|
+|$Cr(x) \longrightarrow$|$148386$|$231191$|$211815$|$89479$|
 </center>
 <br>
                 
@@ -359,12 +359,12 @@ def solution_exercice9():
     st.markdown("""$ \\text{On a utilisé la méthode de César par paquet de 1 avec 25 comme clef pour obtenir BDRSBGZTCBZAQTKD. On cherchons le message original ?}$
 <center>
 
-|$y \longrightarrow$|B|D|R|S|B|G|Z|T|C|B|Z|A|Q|T|K|D|
+|$y \longrightarrow$|$B$|$D$|$R$|$S$|$B$|$G$|$Z$|$T$|$C$|$B$|$Z$|$A$|$Q$|$T$|$K$|$D$|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|$\\Z/26\\Z$|1|3|17|18|1|6|25|19|2|1|25|0|16|19|10|3|
-|$-25$|-24|-22|-8|-7|-24|-19|0|-6|-23|-24|0|-25|-9|-6|-15|-22|
-|$\\Z/26\\Z$|2|4|18|19|2|7|0|20|3|2|0|1|17|20|11|4|
-|$Dc(y) \longrightarrow$|C|E|S|T|C|H|A|U|D|C|A|B|R|U|L|E| 
+|$\\Z/26\\Z$|$1$|$3$|$17$|$18$|$1$|$6$|$25$|$19$|$2$|$1$|$25$|$0$|$16$|$19$|$10$|$3$|
+|$-25$|$-24$|$-22$|$-8$|$-7$|$-24$|$-19$|$0$|$-6$|$-23$|$-24$|$0$|$-25$|$-9$|$-6$|$-15$|$-22$|
+|$\\Z/26\\Z$|$2$|$4$|$18$|$19$|$2$|$7$|$0$|$20$|$3$|$2$|$0$|$1$|$17$|$20$|$11$|$4$|
+|$Dc(y) \longrightarrow$|$C$|$E$|$S$|$T$|$C$|$H$|$A$|$U$|$D$|$C$|$A$|$B$|$R$|$U$|$L$|$E$| 
 
 </center>
 <br>              
@@ -383,12 +383,12 @@ def solution_exercice10():
     st.markdown(""" $\\text{On a utilisé la méthode de César par paquet de 3 avec 250025 comme clef pour obtenir 208907-107501-39318-48312-77499. On cherchons le message original ?}$
 <center>
                 
-|$y \longrightarrow$|208907|107501|39318|48312|77499|
+|$y \longrightarrow$|$208907$|$107501$|$39318$|$48312$|$77499$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|$-250025$|-41118|-142524|-210707|-211713|-172526|
-|$\\Z/252526\\Z$|211408|110002|41819|50813|80000|
-||21-14-08|11-00-02|04-18-19|05-08-13|08-00-00|
-|$Dc(y) \longrightarrow$|VOI|LAC|EST|FIN|IAA|
+|$-250025$|$-41118$|$-142524$|$-210707$|$-211713$|$-172526$|
+|$\\Z/252526\\Z$|$211408$|$110002$|$41819$|$50813$|$80000$|
+||$21-14-08$|$11-00-02$|$04-18-19$|$05-08-13$|$08-00-00$|
+|$Dc(y) \longrightarrow$|$VOI$|$LAC$|$EST$|$FIN$|$IAA$|
 
 </center>
 <br>              
