@@ -1,5 +1,6 @@
 import streamlit as st
 from models.cours.arithmetiqueZ.exercices import *
+from models.cours.exercices import *
 from style.style import style
 
 
@@ -225,7 +226,7 @@ if st.session_state.Exercice13:
 ###                                                                         ###
 ###############################################################################
 if st.session_state.Exercice14:
-    st.subheader('Exercice 4:')
+    st.subheader('Exercice 14:')
     Exercice14_tab_1, Exercice14_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice14_tab_1:
        exercice14()
@@ -506,7 +507,7 @@ if st.session_state.Exercice_ordinateur1:
     st.subheader('Exercice 1:')
     Exercice1_tab_1, Exercice1_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice1_tab_1:
-        st.text('Instraction')
+        ordina_exercice1()
     with Exercice1_tab_2:
         st.text('solution')
 
@@ -519,7 +520,7 @@ if st.session_state.Exercice_ordinateur2:
     st.subheader('Exercice 2:')
     Exercice2_tab_1, Exercice2_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice2_tab_1:
-        st.text('Instraction')
+        ordina_exercice2()
     with Exercice2_tab_2:
         st.text('solution')
 
@@ -533,7 +534,7 @@ if st.session_state.Exercice_ordinateur3:
     st.subheader('Exercice 3:')
     Exercice3_tab_1, Exercice3_tab_2 = st.tabs(['Instruction', 'Solution'])
     with Exercice3_tab_1:
-        st.text('Instraction')
+        ordina_exercice3()
     with Exercice3_tab_2:
         st.text('solution')
 
