@@ -44,4 +44,6 @@ st.markdown("""
 >   ######  TD1: sauf exercice 11
 >            
 >   ######  TD2: les exercices de 1 à 8
+>
+>   ######  TD3: les exercices de 1 et 2
 """,unsafe_allow_html=True)
