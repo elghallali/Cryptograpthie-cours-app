@@ -168,7 +168,7 @@ $0 \\times 0 - (-1) \\times 1 \enspace \equiv_{26} \enspace 1$
 >--- 
 > 
 > 
-> ##### $\\text{Les matrices de } \mathbf{GL_2}(\\Z/26\\Z) \enspace \\text{sont }:$ $A, B, C, D, E, F, H, I$
+> ##### $\\text{Les matrices de } \mathbf{GL_2}(\\Z/26\\Z) \enspace \\text{sont }:$ $A, C, E, F, I$
 > 
 > 
 > 
