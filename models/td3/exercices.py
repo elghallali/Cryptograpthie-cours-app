@@ -6,32 +6,12 @@ import streamlit as st
 ###                                                                         ###
 ###############################################################################
 def exercice1():
-    st.markdown('''
-<style>
-.katex-html {
-    text-align: left;
-}
-</style>''',unsafe_allow_html=True)
-    
-    st.latex(r'''
-    \text{Soit } A=
-    \begin{pmatrix}
-   1 & 2 \\
-   0 & -1
-   \end{pmatrix}, \, B=
-    \begin{pmatrix}
-   1 & 2 \\
-   0 & -1
-   \end{pmatrix} \text{ et }
-             C=
-    \begin{pmatrix}
-   1 & 2 \\
-   0 & -1
-   \end{pmatrix} \text{ des matrices de } \mathcal{M}_2(\Z/26\Z).
-   \!
-     
-    ''')
     st.markdown("""
+    $\\text{Soit } A= \\begin{pmatrix} 1 & 2 \\\ 0 & -1 \end{pmatrix},$ 
+    $B= \\begin{pmatrix} -1 & 1 \\\ 5 & 0 \end{pmatrix} $ $\enspace \\text{et} \enspace$
+    $C=\\begin{pmatrix} 6 & 3 \\\ 3 & 1 \end{pmatrix} $
+    $\\text{ des matrices de }$ $ \mathcal{M}_2(\Z/26\Z)$.
+  
 > $1. \\text{ Calculer } A + B, \quad A \\times C \quad \\text{et} \quad B \\times C$
 >                
 > $2. \\text{ Comparer } (A + B) \\times C \quad \\text{et} \quad A \\times C + B \\times C$ 
@@ -52,7 +32,7 @@ def exercice2():
     text-align: left;
 }
 </style>''',unsafe_allow_html=True)
-    st.markdown("""$\\text{Calculer le déterminant de chacune des matrices suivantes. Identifier les matrices de } \mathbf{GL_2}(\\Z/26\\Z).$
+    st.markdown("""$\\text{Calculer le déterminant de chacune des }$ $\\text{matrices suivantes. Identifier les matrices }$ $\\text{de } \mathbf{GL_2}(\\Z/26\\Z).$
 """)
     exercice2_td3_cols = st.columns(3)
     with exercice2_td3_cols[0]:
@@ -130,7 +110,7 @@ def exercice2():
 ###############################################################################
 def exercice3():
     st.markdown("""
-$\\text{Pour chacune des matrices de } \mathbf{GL_2}(\\Z/26\\Z) \\text{ de l'exercice 2, donner la matrice inverse (modulairement).}$
+$\\text{Pour chacune des matrices de } \mathbf{GL_2}(\\Z/26\\Z) \enspace$ $\\text{de l'exercice 2, donner la matrice inverse }$ $\\text{(modulairement).}$
 """)
 
 
@@ -146,7 +126,7 @@ def exercice4():
     text-align: left;
 }
 </style>''',unsafe_allow_html=True)
-    st.markdown("""$\\text{Parmis les matrices suivantes, lesquelles sont des clefs du cryptosystème de Hill de dimension 2 par paquet de } n?$
+    st.markdown("""$\\text{Parmis les matrices suivantes, lesquelles }$ $\\text{sont des clefs du cryptosystème de Hill de }$ $\\text{dimension 2 par paquet de } n?$
 
 """)
     exercice4_td3_cols = st.columns(3)
@@ -197,20 +177,11 @@ def exercice4():
 ###                                                                         ###
 ###############################################################################
 def exercice5():
-    st.markdown('''
-<style>
-.katex-html {
-    text-align: left;
-}
-</style>''',unsafe_allow_html=True)
     
-    st.latex(r'''
-\text{ En utilisant un chiffrement de Hill de dimension 2 par paquet de 1, chiffrer le mot MATH avec }
-    \begin{pmatrix}
-   1 & 1 \\
-   2 & 3
-   \end{pmatrix}
-    \text{ comme clef.}
+    st.markdown('''
+$\\text{ En utilisant un chiffrement de Hill de }$ $\\text{dimension 2 par paquet de 1, chiffrer le }$ $\\text{mot MATH avec }$
+    $\\begin{pmatrix} 1 & 1 \\\ 2 & 3 \end{pmatrix}$
+    $\\text{ comme clef.}$
 ''')
 
 
@@ -221,19 +192,9 @@ def exercice5():
 ###############################################################################
 def exercice6():
     st.markdown('''
-<style>
-.katex-html {
-    text-align: left;
-}
-</style>''',unsafe_allow_html=True)
-    
-    st.latex(r'''
-\text{ En utilisant un chiffrement de Hill de dimension 2 par paquet de 1, chiffrer le mot KAAMELOT avec }
-    \begin{pmatrix}
-   11 & 1 \\
-   0 & 19
-   \end{pmatrix}
-    \text{ comme clef.}
+$\\text{ En utilisant un chiffrement de Hill de }$ $\\text{dimension 2 par paquet de 1, chiffrer le }$ $\\text{mot KAAMELOT avec }$
+    $\\begin{pmatrix} 11 & 1 \\\ 0 & 19 \end{pmatrix}$
+    $\\text{ comme clef.}$
 ''')
 
 
@@ -244,19 +205,10 @@ def exercice6():
 ###############################################################################
 def exercice7():
     st.markdown('''
-<style>
-.katex-html {
-    text-align: left;
-}
-</style>''',unsafe_allow_html=True)
-    
-    st.latex(r'''
-\text{ On a utilisé un chiffrement de Hill de dimension 2 par paquet de 1 avec }
-    \begin{pmatrix}
-   2 & 3 \\
-   5 & 7
-   \end{pmatrix}
-    \text{ comme clef pour obtenir QMPPEXZVIKUL. Quel était le message clair?}
+
+$\\text{ On a utilisé un chiffrement de Hill de }$ $\\text{dimension 2 par paquet de 1 avec }$
+    $\\begin{pmatrix} 2 & 3 \\\ 5 & 7 \end{pmatrix}$
+    $\\text{ comme clef pour obtenir }$ $\\text{QMPPEXZVIKUL. }$ $\\text{Quel était le message clair?}$
 ''')
 
 
@@ -267,18 +219,7 @@ def exercice7():
 ###############################################################################
 def exercice8():
     st.markdown('''
-<style>
-.katex-html {
-    text-align: left;
-}
-</style>''',unsafe_allow_html=True)
-    
-    st.latex(r'''
-\text{ On a utilisé un chiffrement de Hill de dimension 3 par paquet de 1 avec }
-    \begin{pmatrix}
-   8 & 3 & 0 \\
-   1 & 1 & 11 \\
-   0 & 8 & 7
-   \end{pmatrix}
-    \text{ comme clef pour obtenir YHHKJJUPPLQQGEE. Quel était le message clair?}
+$\\text{ On a utilisé un chiffrement de Hill de }$ $\\text{dimension 3 par paquet de 1 avec }$
+$\\begin{pmatrix} 8 & 3 & 0 \\\ 1 & 1 & 11 \\\ 0 & 8 & 7 \end{pmatrix}$
+$\\text{ comme clef pour obtenir }$ $\\text{YHHKJJUPPLQQGEE. }$ $\\text{Quel était le message clair?}$
 ''')

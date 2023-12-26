@@ -1,10 +1,30 @@
 import streamlit as st
+
+################################################################
+###                                                          ###
+###                 Exercices Instructuions                  ###
+###                                                          ###
+################################################################
 from models.cours.arithmetiqueModulaire.exercices import *
 from models.cours.arithmetiqueZ.exercices import *
-from models.cours.chiffrementAffine.exercices import affine_exercice1
-from models.cours.chiffrementPuissance.exercices import puissance_exercice1
+from models.cours.chiffrementAffine.exercices import *
+from models.cours.chiffrementPuissance.exercices import *
 from models.cours.cryptographieSymetrique.exercices import *
 from models.cours.exercices import *
+
+################################################################
+###                                                          ###
+###                    Exercices Solutions                   ###
+###                                                          ###
+################################################################
+from models.cours.arithmetiqueModulaire.solutions import *
+from models.cours.arithmetiqueZ.solutions import *
+from models.cours.chiffrementAffine.solutions import *
+from models.cours.chiffrementPuissance.solutions import *
+from models.cours.cryptographieSymetrique.solutions import *
+from models.cours.solutions import *
+
+
 from style.style import style
 
 
@@ -55,7 +75,7 @@ if st.session_state.Exercice1:
     with Exercice1_tab_1:
         exercice1()
     with Exercice1_tab_2:
-        st.text('solution')
+        solution_exercice1()
 
 ###############################################################################
 ###                                                                         ###
@@ -68,7 +88,7 @@ if st.session_state.Exercice2:
     with Exercice2_tab_1:
         exercice2()
     with Exercice2_tab_2:
-        st.text('solution')
+        solution_exercice2()
 
 
 ###############################################################################
@@ -82,7 +102,7 @@ if st.session_state.Exercice3:
     with Exercice3_tab_1:
         exercice3()
     with Exercice3_tab_2:
-        st.text('solution')
+        solution_exercice3()
 
 
 ###############################################################################
@@ -96,7 +116,7 @@ if st.session_state.Exercice4:
     with Exercice4_tab_1:
        exercice4()
     with Exercice4_tab_2:
-        st.text('solution')
+        solution_exercice4()
 
 
 ###############################################################################
@@ -110,7 +130,7 @@ if st.session_state.Exercice5:
     with Exercice5_tab_1:
         exercice5()
     with Exercice5_tab_2:
-        st.text('solution')
+        solution_exercice5()
 
 
 ###############################################################################
@@ -125,7 +145,7 @@ if st.session_state.Exercice6:
     with Exercice6_tab_1:
         exercice6()
     with Exercice6_tab_2:
-        st.text('solution')
+        solution_exercice6()
 
 ###############################################################################
 ###                                                                         ###
@@ -138,7 +158,7 @@ if st.session_state.Exercice7:
     with Exercice7_tab_1:
         exercice7()
     with Exercice7_tab_2:
-        st.text('solution')
+        solution_exercice7()
 
 
 ###############################################################################
@@ -152,7 +172,7 @@ if st.session_state.Exercice8:
     with Exercice8_tab_1:
         exercice8()
     with Exercice8_tab_2:
-        st.text('solution')
+        solution_exercice8()
 
 
 ###############################################################################
@@ -166,7 +186,7 @@ if st.session_state.Exercice9:
     with Exercice9_tab_1:
        exercice9()
     with Exercice9_tab_2:
-        st.text('solution')
+        solution_exercice9()
 
 
 ###############################################################################
@@ -180,7 +200,7 @@ if st.session_state.Exercice10:
     with Exercice10_tab_1:
         exercice10()
     with Exercice10_tab_2:
-        st.text('solution')
+        solution_exercice10()
 
 ###############################################################################
 ###                                                                         ###
@@ -194,7 +214,7 @@ if st.session_state.Exercice11:
     with Exercice11_tab_1:
         exercice11()
     with Exercice11_tab_2:
-        st.text('solution')
+        solution_exercice11()
 
 ###############################################################################
 ###                                                                         ###
@@ -207,7 +227,7 @@ if st.session_state.Exercice12:
     with Exercice12_tab_1:
         exercice12()
     with Exercice12_tab_2:
-        st.text('solution')
+        solution_exercice12()
 
 
 ###############################################################################
@@ -221,7 +241,7 @@ if st.session_state.Exercice13:
     with Exercice13_tab_1:
         exercice13()
     with Exercice13_tab_2:
-        st.text('solution')
+        solution_exercice13()
 
 
 ###############################################################################
@@ -235,7 +255,7 @@ if st.session_state.Exercice14:
     with Exercice14_tab_1:
        exercice14()
     with Exercice14_tab_2:
-        st.text('solution')
+        solution_exercice14()
 
 
 ###############################################################################
@@ -249,7 +269,7 @@ if st.session_state.Exercice15:
     with Exercice15_tab_1:
         exercice15()
     with Exercice15_tab_2:
-        st.text('solution')
+        solution_exercice15()
 
 
 ###############################################################################
@@ -264,7 +284,7 @@ if st.session_state.Exercice16:
     with Exercice16_tab_1:
         exercice16()
     with Exercice16_tab_2:
-        st.text('solution')
+        solution_exercice16()
 
 ###############################################################################
 ###                                                                         ###
@@ -277,7 +297,7 @@ if st.session_state.Exercice17:
     with Exercice17_tab_1:
         exercice17()
     with Exercice17_tab_2:
-        st.text('solution')
+        solution_exercice17()
 
 
 ###############################################################################
@@ -291,7 +311,7 @@ if st.session_state.Exercice18:
     with Exercice18_tab_1:
         exercice18()
     with Exercice18_tab_2:
-        st.text('solution')
+        solution_exercice18()
 
 
 ###############################################################################
@@ -305,7 +325,7 @@ if st.session_state.Exercice19:
     with Exercice19_tab_1:
        exercice19()
     with Exercice19_tab_2:
-        st.text('solution')
+        solution_exercice19()
 
 
 ###############################################################################
@@ -319,7 +339,7 @@ if st.session_state.Exercice20:
     with Exercice20_tab_1:
         exercice20()
     with Exercice20_tab_2:
-        st.text('solution')
+        solution_exercice20()
 
 
 

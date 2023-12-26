@@ -7,7 +7,7 @@ import streamlit as st
 ###                                                                         ###
 ###############################################################################
 def exercice1():
-    st.markdown("""$\\text{Pour chacun des entiers } a\\text{, déterminer } D(a) \\text{ l'ensemble des diviseurs positifs de }a.$""")
+    st.markdown("""$\\text{Pour chacun des entiers } a\\text{, déterminer } D(a) $ $\\text{ l'ensemble des diviseurs positifs de }a.$""")
     col_exercice1 = st.columns(5)
     with col_exercice1[0]:
         st.markdown("""$1. \quad a = 99$""")
@@ -27,7 +27,7 @@ def exercice1():
 ###                                                                         ###
 ###############################################################################
 def exercice2():
-    st.markdown("""$\\text{Dans chacun des cas suivant, appliquer l'algorithme d'Euclide pour déterminer le PGCD de A et B.}$""")
+    st.markdown("""$\\text{Dans chacun des cas suivant, appliquer }$ $\\text{ l'algorithme d'Euclide pour déterminer }$ $\\text{le PGCD de A et B.}$""")
     col_exercice2 = st.columns(3)
     with col_exercice2[0]:
         st.markdown("""
@@ -55,7 +55,7 @@ $2. \quad A = 561, \quad B = 187$
 ###                                                                         ###
 ###############################################################################
 def exercice3():
-    st.markdown("""$\\text{Dans chacun des cas, donner l'inverse de } a \\text{ modulo } n \\text{ lorsque cela est possible.}$""")
+    st.markdown("""$\\text{Dans chacun des cas, donner l'inverse de } a $ $\\text{ modulo } n \\text{ lorsque cela est possible.}$""")
     col_exercice3 = st.columns(4)
     with col_exercice3[0]:
         st.markdown("""
@@ -89,7 +89,7 @@ def exercice3():
 ###                                                                         ###
 ###############################################################################
 def exercice4():
-    st.markdown("""$\\text{Les couples suivants définissent-ils des clefs de cryptage affine par paquet de N}$
+    st.markdown("""$\\text{Les couples suivants définissent-ils des clefs }$ $\\text{de cryptage affine par paquet de N}$
                 
 $1. \quad \\text{Pour } N = 1 : (3; 2), \, (13; 8), \, (9; 0).$
 
@@ -105,7 +105,7 @@ $3. \quad \\text{Pour } N = 3 : (2015; 1998), \, (4567; 9002), \, (4073; 88)$
 ###                                                                         ###
 ###############################################################################
 def exercice5():
-    st.markdown("""$\\text{Pour chacune des clefs valides de l'exercice 4, déterminer la fonction de déchiffrement.}$""")
+    st.markdown("""$\\text{Pour chacune des clefs valides de l'exercice 4, }$ $\\text{déterminer la fonction de déchiffrement.}$""")
 
 
 ###############################################################################
@@ -114,7 +114,7 @@ def exercice5():
 ###                                                                         ###
 ###############################################################################
 def exercice6():
-    st.markdown("""$\\text{Crypter le message CHOCOBO par la méthode affine par paquet de 1 avec (7; 7) comme clef.}$""")
+    st.markdown("""$\\text{Crypter le message CHOCOBO par la }$ $\\text{méthode affine par paquet de 1 avec (7; 7) }$ $\\text{comme clef.}$""")
 
 
 ###############################################################################
@@ -123,7 +123,7 @@ def exercice6():
 ###                                                                         ###
 ###############################################################################
 def exercice7():
-    st.markdown("""$\\text{Crypter le message VACANCES par la méthode affine par paquet de 2 avec (1999; 999) comme clef.}$""")
+    st.markdown("""$\\text{Crypter le message VACANCES par }$ $\\text{la méthode affine par paquet de 2 avec }$ $\\text{(1999; 999) comme clef.}$""")
 
 
 ###############################################################################
@@ -132,7 +132,7 @@ def exercice7():
 ###                                                                         ###
 ###############################################################################
 def exercice8():
-    st.markdown("""$\\text{On a utilisé le cryptosystème affine par paquet de 1 avec (7; 1) comme clef pour obtenir CBLXD. Retrouver le message original.}$""")
+    st.markdown("""$\\text{On a utilisé le cryptosystème affine par }$ $\\text{paquet de 1 avec (7; 1) comme clef pour }$ $\\text{obtenir CBLXD. }$ $\\text{Retrouver le message original.}$""")
 
 
 ###############################################################################
@@ -141,9 +141,9 @@ def exercice8():
 ###                                                                         ###
 ###############################################################################
 def exercice9():
-    st.markdown("""$\\text{Décrypter ce message sachant que l'on a utilisé un cryptage affine et que le texte claire commence par TOUT.}$              
-$\\text{OLZOJFENAFKNZOWNDEFWLXDLAHZXUFJLZEFUFOFDRFZG UFOFDR-}$               
-$\\text{FZGKFSODENJDLZPLANPFOSFPYEFFODFKLXONEFAKFSD}$
+    st.markdown("""$\\text{Décrypter ce message sachant que l'on a }$ $\\text{utilisé un cryptage affine et que le texte }$ $\\text{claire commence par TOUT.}$              
+$\\text{OLZOJFENAFKNZOWNDEFWLXDLA}$ $\\text{HZXUFJLZEFUFOFDRFZG UFOFDR-}$               
+$\\text{FZGKFSODENJDLZPLANPFOSFPYEFF}$ $\\text{ODFKLXONEFAKFSD}$
                 """)
 
 
@@ -153,5 +153,5 @@ $\\text{FZGKFSODENJDLZPLANPFOSFPYEFFODFKLXONEFAKFSD}$
 ###                                                                         ###
 ###############################################################################
 def exercice10():
-    st.markdown("""$\\text{On a utilisé le cryptosystème affine pour obtenir 50029-125229-237773-}$ 
-                $\\text{194389-55281-50645. Retrouver le message original.}$""")
+    st.markdown("""$\\text{On a utilisé le cryptosystème affine pour }$ $\\text{obtenir 50029-125229-237773-194389-}$ 
+                $\\text{55281-50645. Retrouver le message original.}$""")

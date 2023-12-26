@@ -88,7 +88,7 @@ def exercice3():
 ###                                                                         ###
 ###############################################################################
 def exercice4():
-    st.markdown("""$ \\text{Dessiner les tables d'addition et de multiplication de }\\Z/7\\Z$.""")
+    st.markdown("""$ \\text{Dessiner les tables d'addition et de }$ $\\text{multiplication de }\\Z/7\\Z$.""")
 
 
 ###############################################################################
@@ -97,7 +97,7 @@ def exercice4():
 ###                                                                         ###
 ###############################################################################
 def exercice5():
-    st.markdown("""$ \\text{Dessiner les tables d'addition et de multiplication de }\\Z/8\\Z.$""")
+    st.markdown("""$ \\text{Dessiner les tables d'addition et de }$ $\\text{multiplication de }\\Z/8\\Z.$""")
 
 
 ###############################################################################
@@ -106,7 +106,7 @@ def exercice5():
 ###                                                                         ###
 ###############################################################################
 def exercice6():
-    st.markdown("""$ \\text{Crypter le mot MATHEMATIQUES par la méthode de César par paquet de 1 avec 19 comme clef.}$""")
+    st.markdown("""$ \\text{Crypter le mot MATHEMATIQUES par }$ $\\text{la méthode de César par paquet de 1 avec 19 }$ $\\text{comme clef.}$""")
 
 
 ###############################################################################
@@ -115,7 +115,7 @@ def exercice6():
 ###                                                                         ###
 ###############################################################################
 def exercice7():
-    st.markdown("""$ \\text{Crypter le mot ZEBRE par la méthode de César par paquet de 1 avec 25 comme clef.}$""")
+    st.markdown("""$ \\text{Crypter le mot ZEBRE par la méthode de }$ $\\text{César par paquet de 1 avec 25 comme clef.}$""")
 
 
 ###############################################################################
@@ -124,7 +124,7 @@ def exercice7():
 ###                                                                         ###
 ###############################################################################
 def exercice8():
-    st.markdown("""$ \\text{Crypter le message VIVELACRYPTO par la méthode de César par paquet de 3 avec 190091 comme clef.}$""")
+    st.markdown("""$ \\text{Crypter le message VIVELACRYPTO }$ $\\text{par la méthode de César par paquet de 3 }$ $\\text{avec 190091 comme clef.}$""")
 
 
 ###############################################################################
@@ -133,7 +133,7 @@ def exercice8():
 ###                                                                         ###
 ###############################################################################
 def exercice9():
-    st.markdown("""$ \\text{On a utilisé la méthode de César par paquet de 1 avec 25 comme clef pour obtenir BDRSBGZTCBZAQTKD. Quel
+    st.markdown("""$ \\text{On a utilisé la méthode de César par }$ $\\text{paquet de 1 avec 25 comme clef pour obtenir }$ $\\text{BDRSBGZTCBZAQTKD. }$ $\\text{Quel
 était le message original ?}$""")
 
 
@@ -143,8 +143,8 @@ def exercice9():
 ###                                                                         ###
 ###############################################################################
 def exercice10():
-    st.markdown("""$ \\text{On a utilisé la méthode de César par paquet de 3 avec 250025 comme clef pour obtenir 208907-107501-39318-
-48312-77499. Quel était le message original ?}$""")
+    st.markdown("""$ \\text{On a utilisé la méthode de César par paquet }$ $\\text{de 3 avec 250025 comme clef pour obtenir }$ $\\text{208907-107501-39318-
+48312-77499. }$ $\\text{Quel était le message original ?}$""")
 
 
 ###############################################################################
@@ -153,5 +153,5 @@ def exercice10():
 ###                                                                         ###
 ###############################################################################
 def exercice11():
-    st.markdown("""$ \\text{Ce message a été codé par la méthode de César : 2138-523-1651-1650-712-1434-1834-2338-412-721-212-708. Quel
+    st.markdown("""$ \\text{Ce message a été codé par la méthode de César : }$ $2138-523-1651-1650-712-1434-1834-2338-412-721-212-708. $ $\\text{Quel
 était le message original ?}$""")
