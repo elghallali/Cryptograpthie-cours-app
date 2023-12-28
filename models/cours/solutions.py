@@ -11,6 +11,10 @@ def divEc(a,b):
     
 def solution_ordina_exercice2():
     code = """
+
+def divEc(a,b):
+    return a%b, a//b
+    
 def algorithme_euclide_etendu(a,b):
     
     table = []
@@ -68,3 +72,5 @@ def bezout(a,b):
 """
 
     st.code(code, language="python")
+
+
