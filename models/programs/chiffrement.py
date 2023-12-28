@@ -51,8 +51,6 @@ def affine_crypt(a,k,message,paquet=1):
 
             return '-'.join([str(i) for i in result])
         return f"Le nombre {a} n'admit pas un inverse dans $\\Z/252526\\Z$"
-    
-    return 0
 
 ###############################################################################
 ###                                                                         ###
@@ -68,7 +66,7 @@ def affine_decrypt(a,k,message,paquet=1):
                 i = alphabet.index(char)
                 result += alphabet[(inverse_a*(i- k))%26]
             return result
-        return 0
+        return f"Le nombre {a} n'admit pas un inverse dans $\\Z/26\\Z$"
     if paquet == 2:
         if pgcd(a,2526) == 1:
             inverse_a = bezout(a,2526)[0]%2526
@@ -78,7 +76,7 @@ def affine_decrypt(a,k,message,paquet=1):
             b_index_char = [[i//100,i%100] for i in b]
             char_list = [[alphabet[k] for k in i] for i in  b_index_char]
             return ''.join([''.join(i) for i in char_list])
-        return 0
+        return f"Le nombre {a} n'admit pas un inverse dans $\\Z/2526\\Z$"
     if paquet == 3:
         if pgcd(a,252526) == 1:
             inverse_a = bezout(a,252526)[0]%252526
@@ -88,7 +86,7 @@ def affine_decrypt(a,k,message,paquet=1):
             b_index_char = [[i//10000,(i%10000)//100,(i%10000)%100] for i in b]
             char_list = [[alphabet[k] for k in i] for i in  b_index_char]
             return ''.join([''.join(i) for i in char_list])
-        return 0
+        return f"Le nombre {a} n'admit pas un inverse dans $\\Z/252526\\Z$"
 
 
 ###############################################################################
@@ -177,8 +175,8 @@ def puissance_crypt(a,k,c,message):
                 i = alphabet.index(char)
                 result += alphabet[((a*(i**c))+k)%26]
             return result
-        return 0
-    return 0
+        return f"Le nombre {c} n'admit pas un inverse dans $\\Z/12\\Z$"
+    return f"Le nombre {a} n'admit pas un inverse dans $\\Z/26\\Z$"
 
 
 ###############################################################################
@@ -196,5 +194,5 @@ def puissance_decrypt(a,k,c,message):
                 i = alphabet.index(char)
                 result += alphabet[((inverse_a * (i - k))**inverse_c)%26]
             return result
-        return 0
-    return 0
+        return f"Le nombre {c} n'admit pas un inverse dans $\\Z/12\\Z$"
+    return f"Le nombre {a} n'admit pas un inverse dans $\\Z/26\\Z$"

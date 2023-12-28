@@ -603,7 +603,7 @@ with ordina_exercice_cols[3]:
 with ordina_exercice_cols[4]:
     numberC = st.number_input("**$\\text{Entrer la valeur de c:}$**", step=1, value=None)
 
-message = st.text_input("**$\\text{Enter le message:}$**")
+message = st.text_input("**$\\text{Enter le message:}$**").upper()
 
 test_cols = st.columns([1,1,2,1,1])
 with test_cols[0]:
@@ -650,24 +650,46 @@ if algorithme_euclide_etendu_button:
 
 if crypto_symetrique_button:
     st.markdown("""- $\\text{Le message crypté est:}$""")
-    st.write(f"$\qquad \quad {symetrique_crypt(numberK,message,paquet)}$")
+    st.markdown(f"$\qquad \quad {symetrique_crypt(numberK,message,paquet)}$")
 
 if decrypt_symetrique_button:
     st.markdown("""- $\\text{Le message décrypté est:}$""")
-    st.write(f"$\qquad \quad {symetrique_decrypt(numberK,message,paquet)}$")
+    st.markdown(f"$\qquad \quad {symetrique_decrypt(numberK,message,paquet)}$")
 
 if crypto_affine_button:
     st.markdown("""- $\\text{Le message crypté est:}$""")
-    st.write(f"{affine_crypt(numberA,numberK,message,paquet)}")
+    st.markdown(f"""
+<center>
+{affine_crypt(numberA,numberK,message,paquet)}
+</center>
+""", unsafe_allow_html=True)
 
 if decrypt_affine_button:
     st.markdown("""- $\\text{Le message décrypté est:}$""")
-    st.write(f"{affine_decrypt(numberA, numberK, message, paquet)}")
+    st.markdown(f"""
+<center>
+                
+{affine_decrypt(numberA, numberK, message, paquet)}
+
+</center>
+""",unsafe_allow_html=True)
 
 if crypto_puissance_button:
     st.markdown("""- $\\text{Le message crypté est:}$""")
-    st.write(f"{puissance_crypt(numberA,numberK,numberC,message)}")
+    st.markdown(f"""
+<center>
+                
+{puissance_crypt(numberA,numberK,numberC,message)}
+
+</center>
+""",unsafe_allow_html=True)
 
 if decrypt_puissance_button:
     st.markdown("""- $\\text{Le message crypté est:}$""")
-    st.write(f"{puissance_decrypt(numberA,numberK,numberC,message)}")
+    st.markdown(f"""
+<center>
+                
+{puissance_decrypt(numberA,numberK,numberC,message)}
+
+</center>
+""",unsafe_allow_html=True)
