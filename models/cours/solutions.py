@@ -46,6 +46,10 @@ def pgcd(a,b):
 
 def solution_ordina_exercice3():
     code = """
+
+def divEc(a,b):
+    return a%b, a//b    
+
 def algorithme_euclide_etendu(a,b):
     
     table = []
