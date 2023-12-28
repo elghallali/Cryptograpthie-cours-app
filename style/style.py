@@ -13,6 +13,10 @@ def style():
                 color: #091747;
             }
             
+            p {
+                font-family: math;
+            }
+            
             h1, h2, h3, h4, h5, h6, button p, a p {
                 font-family: 'PT Serif', serif;
             }           

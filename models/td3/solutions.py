@@ -180,7 +180,77 @@ $0 \\times 0 - (-1) \\times 1 \enspace \equiv_{26} \enspace 1$
 ###                                                                         ###
 ###############################################################################
 def solution_exercice3():
-    pass
+    st.markdown("""
+$\\text{Pour chacune des matrices de } \mathbf{GL_2}(\\Z/26\\Z) \enspace$
+$\\text{de l'exercice 2, On donnons la matrice inverse }$
+$\\text{(modulairement).}$
+>
+> ###### $1. \quad A= \\begin{pmatrix} 11 & 3 \\\ 2 & -5 \end{pmatrix}:$
+>
+> - $det(A) \equiv_{26} \enspace 17 \implies \quad det(A)^{-1} \equiv_{26} \enspace 23$
+>
+> - $A^{-1} \enspace \equiv_{26} \enspace det(A)^{-1} \cdot \\begin{pmatrix} -5 & -3 \\\ -2 & 11 \end{pmatrix} \enspace$
+$\equiv_{26} \enspace 23 \\times \\begin{pmatrix} -5 & -3 \\\ -2 & 11 \end{pmatrix} \enspace$
+$\equiv_{26} \enspace \\begin{pmatrix} 23 \\times (-5) & 23 \\times (-3) \\\ 23 \\times (-2) & 23 \\times 11 \end{pmatrix} \enspace$
+$\equiv_{26} \enspace \\begin{pmatrix} -115 & -69 \\\ -46 & 253 \end{pmatrix} \enspace$
+>
+> $\qquad \quad \\text{Donc} \enspace A^{-1} \enspace \equiv_{26} \enspace \\begin{pmatrix} 15 & 9 \\\ 6 & 7 \end{pmatrix}$
+>
+>---
+>
+>
+> 
+>
+> ###### $2. \quad C=\\begin{pmatrix} 1 & -5 \\\ -1 & 8 \end{pmatrix}:$
+>
+>
+> - $det(C) \equiv_{26} \enspace 3 \implies \quad det(C)^{-1} \equiv_{26} \enspace 9$
+>
+> - $C^{-1} \enspace \equiv_{26} \enspace det(C)^{-1} \cdot \\begin{pmatrix} 8 & 5 \\\ 1 & 1 \end{pmatrix} \enspace$
+$\equiv_{26} \enspace 9 \\times \\begin{pmatrix} 8 & 5 \\\ 1 & 1 \end{pmatrix} \enspace$
+$\equiv_{26} \enspace \\begin{pmatrix} 9 \\times 8 & 9 \\times 5 \\\ 9 \\times 1 & 9 \\times 1 \end{pmatrix} \enspace$
+$\equiv_{26} \enspace \\begin{pmatrix} 72 & 45 \\\ 9 & 9 \end{pmatrix} \enspace$
+>
+> $\qquad \quad \\text{Donc} \enspace C^{-1} \enspace \equiv_{26} \enspace \\begin{pmatrix} 20 & 19 \\\ 9 & 9 \end{pmatrix}$
+>
+>
+>---
+> ###### $3. \quad E= \\begin{pmatrix} 1 & 2 \\\ 3 & 5 \end{pmatrix}:$
+>
+> - $det(E) \enspace \equiv_{26} \enspace 25 \implies \quad det(E)^{-1} \equiv_{26} \enspace 25$
+>
+> - $E^{-1} \enspace \equiv_{26} \enspace det(E)^{-1} \cdot \\begin{pmatrix} 5 & -2 \\\ -3 & 1 \end{pmatrix} \enspace$
+$\equiv_{26} \enspace 25 \\times \\begin{pmatrix} 5 & -2 \\\ -3 & 1 \end{pmatrix} \enspace$
+$\equiv_{26} \enspace \\begin{pmatrix} 25 \\times 5 & 25 \\times (-2) \\\ 25 \\times (-3) & 25 \\times 1 \end{pmatrix} \enspace$
+$\equiv_{26} \enspace \\begin{pmatrix} 125 & -50 \\\ -75 & 25 \end{pmatrix} \enspace$
+>
+> $\qquad \quad \\text{Donc} \enspace E^{-1} \enspace \equiv_{26} \enspace \\begin{pmatrix} 21 & 2 \\\ 3 & 25 \end{pmatrix}$
+>
+>
+>---
+> ###### $4. \quad F=\\begin{pmatrix} 12 & 13 \\\ 11 & 10 \end{pmatrix}:$
+>
+> - $det(F) \enspace \equiv_{26} \enspace 3 \implies \quad det(F)^{-1} \equiv_{26} \enspace 9$
+>
+> - $F^{-1} \enspace \equiv_{26} \enspace det(F)^{-1} \cdot \\begin{pmatrix} 10 & -13 \\\ -11 & 12 \end{pmatrix}$
+$\enspace \equiv_{26} \enspace 9 \\times \\begin{pmatrix} 10 & -13 \\\ -11 & 12 \end{pmatrix}$
+$\enspace \equiv_{26} \enspace \\begin{pmatrix} 9 \\times 10 & 9 \\times (-13) \\\ 9 \\times (-11) & 9 \\times 12 \end{pmatrix}$
+$\enspace \equiv_{26} \enspace \\begin{pmatrix} 90 & -117 \\\ -99 & 108 \end{pmatrix}$
+>
+> $\qquad \quad \\text{Donc} \enspace F^{-1} \enspace \equiv_{26} \enspace \\begin{pmatrix} 12 & 13 \\\ 5 & 4 \end{pmatrix}$
+>
+>
+>---
+> ###### $5. \quad I=\\begin{pmatrix} 0 & -1 \\\ 1 & 0 \end{pmatrix}:$
+>
+> - $det(I) \enspace \equiv_{26} \enspace 1 \implies \quad det(I)^{-1} \equiv_{26} \enspace 1$
+>
+> - $I^{-1} \enspace \equiv_{26} \enspace det(I)^{-1} \cdot \\begin{pmatrix} 0 & 1 \\\ -1 & 0 \end{pmatrix} \enspace$
+$\equiv_{26} \enspace 1 \\times \\begin{pmatrix} 0 & 1 \\\ -1 & 0 \end{pmatrix} \enspace$
+$\equiv_{26} \enspace \\begin{pmatrix} 0 & 1 \\\ -1 & 0 \end{pmatrix}$
+>
+> $\qquad \quad \\text{Donc} \enspace I^{-1} \enspace \equiv_{26} \enspace \\begin{pmatrix} 0 & 1 \\\ 25 & 0 \end{pmatrix}$
+""")
 
 ###############################################################################
 ###                                                                         ###

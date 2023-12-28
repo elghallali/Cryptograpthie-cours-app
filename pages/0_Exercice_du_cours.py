@@ -1,5 +1,5 @@
 import streamlit as st
-
+import pandas as pd
 ################################################################
 ###                                                          ###
 ###                 Exercices Instructuions                  ###
@@ -24,7 +24,8 @@ from models.cours.chiffrementPuissance.solutions import *
 from models.cours.cryptographieSymetrique.solutions import *
 from models.cours.solutions import *
 
-
+from models.programs.arithmetique import *
+from models.programs.chiffrement import *
 from style.style import style
 
 
@@ -547,7 +548,7 @@ if st.session_state.Exercice_ordinateur1:
     with Exercice1_tab_1:
         ordina_exercice1()
     with Exercice1_tab_2:
-        st.text('solution')
+        solution_ordina_exercice1()
 
 ###############################################################################
 ###                                                                         ###
@@ -560,7 +561,7 @@ if st.session_state.Exercice_ordinateur2:
     with Exercice2_tab_1:
         ordina_exercice2()
     with Exercice2_tab_2:
-        st.text('solution')
+        solution_ordina_exercice2()
 
 
 ###############################################################################
@@ -574,5 +575,99 @@ if st.session_state.Exercice_ordinateur3:
     with Exercice3_tab_1:
         ordina_exercice3()
     with Exercice3_tab_2:
-        st.text('solution')
+        solution_ordina_exercice3()
 
+
+###############################################################################
+###                                                                         ###
+###                             Pratiques                                   ###
+###                                                                         ###
+###############################################################################
+st.divider()
+st.markdown("""
+<center>
+            
+## Pratiques
+            
+</center><br>
+            """,unsafe_allow_html=True)
+ordina_exercice_cols = st.columns(5)
+with ordina_exercice_cols[0]:
+    numberA = st.number_input("**$\\text{Entrer la valeur de a:}$**",step=1, value=None)
+with ordina_exercice_cols[1]:
+    numberB = st.number_input("**$\\text{Entrer la valeur de n:}$**", step=1, value=None)
+with ordina_exercice_cols[2]:
+    paquet = st.number_input("**$\\text{Entrer la valeur de paquet:}$**",step=1,min_value=1,max_value=3, value=1)
+with ordina_exercice_cols[3]:
+    numberK = st.number_input("**$\\text{Entrer la valeur de k:}$**", step=1, value=None)
+with ordina_exercice_cols[4]:
+    numberC = st.number_input("**$\\text{Entrer la valeur de c:}$**", step=1, value=None)
+
+message = st.text_input("**$\\text{Enter le message:}$**")
+
+test_cols = st.columns([1,1,2,1,1])
+with test_cols[0]:
+    pgcd_button = st.button("$\\text{PGCD}$", use_container_width=True)
+with test_cols[1]:
+    bezout_button = st.button("$\\text{Bezout}$",use_container_width=True)
+with test_cols[2]:
+    algorithme_euclide_etendu_button = st.button("$\\text{Algorithme d'Euclide Étendu}$", use_container_width=True)
+with test_cols[3]:
+    crypto_affine_button = st.button("$\\text{Crypter Affine}$", use_container_width=True)
+with test_cols[4]:
+    decrypt_affine_button = st.button("$\\text{Decrypter Affine}$", use_container_width=True)
+
+test_cols2 = st.columns([1,1,1,1])
+with test_cols2[0]:
+    crypto_symetrique_button = st.button("$\\text{Crypter Symétrique}$", use_container_width=True)
+with test_cols2[1]:
+    decrypt_symetrique_button = st.button("$\\text{Decrypter Symétrique}$",use_container_width=True)
+with test_cols2[2]:
+    crypto_puissance_button = st.button("$\\text{Crypter Puissance}$", use_container_width=True)
+with test_cols2[3]:
+    decrypt_puissance_button = st.button("$\\text{Decrypter Puissance}$", use_container_width=True)
+
+
+if pgcd_button:
+    st.markdown("""- $\\text{Le PGCD:}$""")
+    st.markdown(f"$\qquad \quad PGCD({numberA},{numberB}) = {pgcd(numberA,numberB)}$")
+
+if bezout_button:
+    st.markdown("""- $\\text{L'identité de Bézout:}$""")
+    st.write(f"$\qquad \quad u ={bezout(numberA,numberB)[0]}$")
+    st.write(f"$\qquad \quad v ={bezout(numberA,numberB)[1]}$")
+    st.write(f"$\qquad \quad {numberA} \\times {bezout(numberA,numberB)[0] if bezout(numberA,numberB)[0] >= 0 else '('+str(bezout(numberA,numberB)[0])+')'} {' + '+ str(numberB) if numberB >= 0 else numberB} \\times {bezout(numberA,numberB)[1] if bezout(numberA,numberB)[1] >= 0 else '('+str(bezout(numberA,numberB)[1])+')'} = {str(pgcd(numberA,numberB))}$")
+
+if algorithme_euclide_etendu_button:
+    st.markdown("""- $\\text{Algorithme d'Euclide Étendu:}$""")
+    df = pd.DataFrame(algorithme_euclide_etendu(numberA,numberB), columns=["a","b","r","q","u","v"])
+    st.dataframe(df)
+    st.markdown("""- $\\text{L'identité de Bézout:}$""")
+    st.write(f"$\qquad \quad {numberA} \\times u {' + '+ str(numberB) if numberB >= 0 else numberB} \\times v ={numberA} \\times {bezout(numberA,numberB)[0] if bezout(numberA,numberB)[0] >= 0 else '('+str(bezout(numberA,numberB)[0])+')'} {' + '+ str(numberB) if numberB >= 0 else numberB} \\times {bezout(numberA,numberB)[1] if bezout(numberA,numberB)[1] >= 0 else '('+str(bezout(numberA,numberB)[1])+')'} = {str(abs(pgcd(numberA,numberB)))}$")
+    st.write(f"$\qquad \quad u ={bezout(numberA,numberB)[0]}, \quad v ={bezout(numberA,numberB)[1]}.$")
+    st.markdown("""- $\\text{Le PGCD:}$""")
+    st.markdown(f"$\qquad \quad Le \, PGCD({numberA},{numberB}) = {abs(pgcd(numberA,numberB))}$")
+
+if crypto_symetrique_button:
+    st.markdown("""- $\\text{Le message crypté est:}$""")
+    st.write(f"$\qquad \quad {symetrique_crypt(numberK,message,paquet)}$")
+
+if decrypt_symetrique_button:
+    st.markdown("""- $\\text{Le message décrypté est:}$""")
+    st.write(f"$\qquad \quad {symetrique_decrypt(numberK,message,paquet)}$")
+
+if crypto_affine_button:
+    st.markdown("""- $\\text{Le message crypté est:}$""")
+    st.write(f"{affine_crypt(numberA,numberK,message,paquet)}")
+
+if decrypt_affine_button:
+    st.markdown("""- $\\text{Le message décrypté est:}$""")
+    st.write(f"{affine_decrypt(numberA, numberK, message, paquet)}")
+
+if crypto_puissance_button:
+    st.markdown("""- $\\text{Le message crypté est:}$""")
+    st.write(f"{puissance_crypt(numberA,numberK,numberC,message)}")
+
+if decrypt_puissance_button:
+    st.markdown("""- $\\text{Le message crypté est:}$""")
+    st.write(f"{puissance_decrypt(numberA,numberK,numberC,message)}")

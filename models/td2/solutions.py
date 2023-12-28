@@ -714,12 +714,12 @@ def solution_exercice6():
 > |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|               
 > |$\\Z/26\\Z$|$2$|$7$|$14$|$2$|$14$|$1$|$14$|               
 > |$7x + 7$|$21$|$56$|$105$|$21$|$105$|$14$|$105$|               
-> |$\\Z/26\\Z$|$21$|$20$|$1$|$21$|$1$|$14$|$1$|               
-> |$y \longrightarrow$|$V$|$U$|$B$|$V$|$B$|$O$|$B$|               
+> |$\\Z/26\\Z$|$21$|$4$|$1$|$21$|$1$|$14$|$1$|               
+> |$y \longrightarrow$|$V$|$E$|$B$|$V$|$B$|$O$|$B$|               
 >                
 > $\!$               
 >                
-> $\\text{Le message crypté du message CHOCOBO par la méthode affine par paquet de 1 avec (7; 7) comme clef est: VUBVBOB.}$               
+> $\\text{Le message crypté du message CHOCOBO par la méthode affine par paquet de 1 avec (7; 7) comme clef est: VEBVBOB.}$               
 >                
                 
                 """)
@@ -803,13 +803,13 @@ def solution_exercice8():
 > |$y \longrightarrow$|$C$|$B$|$L$|$X$|$D$|
 > |:---:|:---:|:---:|:---:|:---:|:---:|
 > |$\\Z/26\\Z$|$2$|$1$|$11$|$23$|$3$|
-> |$15(y-1)$|$29$|$14$|$164$|$344$|$44$|
-> |$\\Z/26\\Z$|$3$|$14$|$8$|$6$|$18$|
-> |$x \longrightarrow$|$D$|$O$|$I$|$G$|$S$|
+> |$15(y-1)$|$15$|$0$|$150$|$330$|$30$|
+> |$\\Z/26\\Z$|$15$|$0$|$20$|$18$|$4$|
+> |$x \longrightarrow$|$P$|$A$|$U$|$S$|$E$|
 >
 > $\!$
 >
-> $\\text{Le message original est DOIGS}$
+> $\\text{Le message original est PAUSE}$
 """)
 
 
