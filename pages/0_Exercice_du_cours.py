@@ -650,17 +650,38 @@ if algorithme_euclide_etendu_button:
 
 if crypto_symetrique_button:
     st.markdown("""- $\\text{Le message crypté est:}$""")
-    st.markdown(f"$\qquad \quad {symetrique_crypt(numberK,message,paquet)}$")
+    st.markdown(f"""
+
+<center>
+
+#### {symetrique_crypt(numberK,message,paquet)}
+
+<center>
+
+
+""", unsafe_allow_html=True)
 
 if decrypt_symetrique_button:
     st.markdown("""- $\\text{Le message décrypté est:}$""")
-    st.markdown(f"$\qquad \quad {symetrique_decrypt(numberK,message,paquet)}$")
+    st.markdown(f"""
+
+<center>
+                
+#### {symetrique_decrypt(numberK,message,paquet)}
+
+</center>
+
+""", unsafe_allow_html=True)
+
+
 
 if crypto_affine_button:
     st.markdown("""- $\\text{Le message crypté est:}$""")
     st.markdown(f"""
 <center>
-{affine_crypt(numberA,numberK,message,paquet)}
+                
+#### {affine_crypt(numberA,numberK,message,paquet)}
+
 </center>
 """, unsafe_allow_html=True)
 
@@ -669,7 +690,7 @@ if decrypt_affine_button:
     st.markdown(f"""
 <center>
                 
-{affine_decrypt(numberA, numberK, message, paquet)}
+#### {affine_decrypt(numberA, numberK, message, paquet)}
 
 </center>
 """,unsafe_allow_html=True)
@@ -679,7 +700,7 @@ if crypto_puissance_button:
     st.markdown(f"""
 <center>
                 
-{puissance_crypt(numberA,numberK,numberC,message)}
+#### {puissance_crypt(numberA,numberK,numberC,message)}
 
 </center>
 """,unsafe_allow_html=True)
@@ -689,7 +710,7 @@ if decrypt_puissance_button:
     st.markdown(f"""
 <center>
                 
-{puissance_decrypt(numberA,numberK,numberC,message)}
+#### {puissance_decrypt(numberA,numberK,numberC,message)}
 
 </center>
 """,unsafe_allow_html=True)
