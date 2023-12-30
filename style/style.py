@@ -17,6 +17,39 @@ def style():
                 font-family: math;
             }
             
+            tr th {
+                background-color: purple;
+                color: white;
+            }
+                
+            tr th:first-child{
+                display: none;
+                visibility:hidden;
+            }
+                
+            th, td {
+                text-align: center !important;
+            }
+                
+            th {
+                font-weight: bold !important;
+                font-size: 30px;
+            }
+            
+            tr:hover {
+                background-color: #07F;
+            }
+                
+            td:hover {
+                background-color: rgba(0, 230, 250, 0.89);
+                color: blue;
+            }
+                
+            tr {
+                font-family: math;
+                font-size: 24px;
+            }
+            
             h1, h2, h3, h4, h5, h6, button p, a p {
                 font-family: 'PT Serif', serif;
             }           

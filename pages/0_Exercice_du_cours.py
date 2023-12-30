@@ -641,7 +641,9 @@ if bezout_button:
 if algorithme_euclide_etendu_button:
     st.markdown("""- $\\text{Algorithme d'Euclide Étendu:}$""")
     df = pd.DataFrame(algorithme_euclide_etendu(numberA,numberB), columns=["a","b","r","q","u","v"])
-    st.dataframe(df)
+    algo_cols = st.columns([1,4,1])
+    with algo_cols[1]:
+        st.table(df)
     st.markdown("""- $\\text{L'identité de Bézout:}$""")
     st.write(f"$\qquad \quad {numberA} \\times u {' + '+ str(numberB) if numberB >= 0 else numberB} \\times v ={numberA} \\times {bezout(numberA,numberB)[0] if bezout(numberA,numberB)[0] >= 0 else '('+str(bezout(numberA,numberB)[0])+')'} {' + '+ str(numberB) if numberB >= 0 else numberB} \\times {bezout(numberA,numberB)[1] if bezout(numberA,numberB)[1] >= 0 else '('+str(bezout(numberA,numberB)[1])+')'} = {str(abs(pgcd(numberA,numberB)))}$")
     st.write(f"$\qquad \quad u ={bezout(numberA,numberB)[0]}, \quad v ={bezout(numberA,numberB)[1]}.$")
