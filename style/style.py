@@ -22,10 +22,7 @@ def style():
                 color: white;
             }
                 
-            tr th:first-child{
-                display: none;
-                visibility:hidden;
-            }
+            
                 
             th, td {
                 text-align: center !important;

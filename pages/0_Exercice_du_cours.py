@@ -639,6 +639,14 @@ if bezout_button:
     st.write(f"$\qquad \quad {numberA} \\times {bezout(numberA,numberB)[0] if bezout(numberA,numberB)[0] >= 0 else '('+str(bezout(numberA,numberB)[0])+')'} {' + '+ str(numberB) if numberB >= 0 else numberB} \\times {bezout(numberA,numberB)[1] if bezout(numberA,numberB)[1] >= 0 else '('+str(bezout(numberA,numberB)[1])+')'} = {str(pgcd(numberA,numberB))}$")
 
 if algorithme_euclide_etendu_button:
+    st.markdown("""
+<style>
+      tr th:first-child {
+                display: none;
+                visibility:hidden;
+            }          
+</style>
+""",unsafe_allow_html=True)
     st.markdown("""- $\\text{Algorithme d'Euclide Étendu:}$""")
     df = pd.DataFrame(algorithme_euclide_etendu(numberA,numberB), columns=["a","b","r","q","u","v"])
     algo_cols = st.columns([1,4,1])
