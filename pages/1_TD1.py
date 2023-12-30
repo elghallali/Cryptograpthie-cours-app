@@ -100,16 +100,15 @@ st.divider()
 st.header('Cryptographie de César')
 st.markdown("""
 <style>
-.table thead {
-    background-color: #000;
-    color: white;
+.table thead tr th {
+    display: none;
 }
 .table tbody tr:nth-child(even) {
     background-color: #000;
     color: white;
 }
 .table tbody tr:nth-child(odd) {
-    background-color: #333;
+    background-color: purple;
     color: white;
 }
 </style>
@@ -119,6 +118,7 @@ st.markdown("""
             
 |$A$|$B$|$C$|$D$|$E$|$F$|$G$|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|$A$|$B$|$C$|$D$|$E$|$F$|$G$|
 |$0$|$1$|$2$|$3$|$4$|$5$|$6$|
 |$H$|$I$|$J$|$K$|$L$|$M$|$N$|
 |$7$|$8$|$9$|$10$|$11$|$12$|$13$|
