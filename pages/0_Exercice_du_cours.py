@@ -684,28 +684,38 @@ if decomposition_button:
     if com_tuple[-1][1] != 1:
         text += str(com_tuple[-1][0])+"^{" + str(com_tuple[-1][1])+"}"
     else:
-        text += str(com_tuple[-1][0])  
-
+        text += str(com_tuple[-1][0])
     st.markdown(f"""
 
-    <div style="display: grid; grid-template-columns: auto auto;">            
-    <div style="padding-right: 5px; text-align: end;">
-    {html_content}
-    </div>
-    <div style="border-left: 4px solid #E694FF; padding-left: 5px; text-align: start;">
-    {html_content2}
-    </div>
-    </div>    
+##### La décomposion de {numberA} en facteur premier est: 
 
+<div style="display: grid; grid-template-columns: auto auto;">            
+<div style="padding-right: 5px; text-align: end;">
+{html_content}
+</div>
+<div style="border-left: 4px solid #E694FF; padding-left: 5px; text-align: start;">
+{html_content2}
+</div>
+</div>    
 
-    ${numberA} = {text}$
-    """,unsafe_allow_html=True)
+$Donc:\quad {numberA} = {text}$
+
+<br>
+
+$\implies D({numberA}) = {divisors(numberA)}$
+""",unsafe_allow_html=True)
 
 if nombres_premiers_button:
     st.markdown(f"""
 
-{primeNumbersLessThan(numberA)}
-""")
+##### Les nombres premiers inférieur a {numberA} sont: 
+
+<div align="center">
+
+###### ${primeNumbersLessThan(numberA)}$
+
+</div>
+""",unsafe_allow_html=True)
 
 if crypto_symetrique_button:
     st.markdown("""- $\\text{Le message crypté est:}$""")
