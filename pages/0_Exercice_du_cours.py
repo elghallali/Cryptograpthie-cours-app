@@ -680,6 +680,8 @@ if decomposition_button:
     html_content += '<span>1</span><br>'
 
     text = f""
+    if numberA < 0:
+        text += '-'
     if len(com_tuple) > 1:
         for i in range(len(com_tuple)-1):
             if com_tuple[i][1] != 1:

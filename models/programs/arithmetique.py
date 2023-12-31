@@ -45,6 +45,7 @@ def primeNumber(a):
     return True
 
 def primeNumbersLessThan(a):
+    a = abs(a)
     prime_numbers = []
     for i in range(2,a+1):
         if primeNumber(i) == True:
@@ -52,6 +53,7 @@ def primeNumbersLessThan(a):
     return prime_numbers
 
 def divisors(a):
+    a = abs(a)
     divisors = []
     for i in range(1,a+1):
         if a%i == 0:
@@ -60,6 +62,7 @@ def divisors(a):
 
 
 def decomposition(n):
+    n = abs(n)
     pn = primeNumbersLessThan(n)
     q = n
     com = {}
