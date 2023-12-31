@@ -613,20 +613,26 @@ with test_cols[1]:
 with test_cols[2]:
     algorithme_euclide_etendu_button = st.button("$\\text{Algorithme d'Euclide Étendu}$", use_container_width=True)
 with test_cols[3]:
-    crypto_affine_button = st.button("$\\text{Crypter Affine}$", use_container_width=True)
+    decomposition_button = st.button("$\\text{Decomposition}$", use_container_width=True)
 with test_cols[4]:
-    decrypt_affine_button = st.button("$\\text{Decrypter Affine}$", use_container_width=True)
+    nombres_premiers_button = st.button("$\\text{Nombres Premiers}$", use_container_width=True)
 
-test_cols2 = st.columns([1,1,1,1])
+test_cols2 = st.columns([1,1,1])
 with test_cols2[0]:
-    crypto_symetrique_button = st.button("$\\text{Crypter Symétrique}$", use_container_width=True)
+    crypto_affine_button = st.button("$\\text{Crypter Affine}$", use_container_width=True)
 with test_cols2[1]:
-    decrypt_symetrique_button = st.button("$\\text{Decrypter Symétrique}$",use_container_width=True)
+    decrypt_affine_button = st.button("$\\text{Decrypter Affine}$", use_container_width=True)
 with test_cols2[2]:
-    crypto_puissance_button = st.button("$\\text{Crypter Puissance}$", use_container_width=True)
-with test_cols2[3]:
-    decrypt_puissance_button = st.button("$\\text{Decrypter Puissance}$", use_container_width=True)
+    crypto_symetrique_button = st.button("$\\text{Crypter Symétrique}$", use_container_width=True)
 
+
+test_cols3 = st.columns([1,1,1])
+with test_cols3[0]:
+    decrypt_symetrique_button = st.button("$\\text{Decrypter Symétrique}$",use_container_width=True)
+with test_cols3[1]:
+    crypto_puissance_button = st.button("$\\text{Crypter Puissance}$", use_container_width=True)
+with test_cols3[2]:
+    decrypt_puissance_button = st.button("$\\text{Decrypter Puissance}$", use_container_width=True)
 
 if pgcd_button:
     st.markdown("""- $\\text{Le PGCD:}$""")
@@ -657,6 +663,49 @@ if algorithme_euclide_etendu_button:
     st.write(f"$\qquad \quad u ={bezout(numberA,numberB)[0]}, \quad v ={bezout(numberA,numberB)[1]}.$")
     st.markdown("""- $\\text{Le PGCD:}$""")
     st.markdown(f"$\qquad \quad Le \, PGCD({numberA},{numberB}) = {abs(pgcd(numberA,numberB))}$")
+
+if decomposition_button:
+    com_list,com_tuple = decomposition(numberA)
+    html_content = ''
+    html_content2 = ''
+    for i in com_list:
+        html_content += '<span>' + str(i[0]) + '</span><br>'
+        html_content2 += '<span>' + str(i[1]) + '</span><br>'
+    html_content += '<span>1</span><br>'
+
+    text = f""
+    if len(com_tuple) > 1:
+        for i in range(len(com_tuple)-1):
+            if com_tuple[i][1] != 1:
+                text += str(com_tuple[i][0])+"^{" + str(com_tuple[i][1]) +"} \\times"
+            else:
+                text += str(com_tuple[i][0])+ "\\times"
+
+    if com_tuple[-1][1] != 1:
+        text += str(com_tuple[-1][0])+"^{" + str(com_tuple[-1][1])+"}"
+    else:
+        text += str(com_tuple[-1][0])  
+
+    st.markdown(f"""
+
+    <div style="display: grid; grid-template-columns: auto auto;">            
+    <div style="padding-right: 5px; text-align: end;">
+    {html_content}
+    </div>
+    <div style="border-left: 4px solid #E694FF; padding-left: 5px; text-align: start;">
+    {html_content2}
+    </div>
+    </div>    
+
+
+    ${numberA} = {text}$
+    """,unsafe_allow_html=True)
+
+if nombres_premiers_button:
+    st.markdown(f"""
+
+{primeNumbersLessThan(numberA)}
+""")
 
 if crypto_symetrique_button:
     st.markdown("""- $\\text{Le message crypté est:}$""")

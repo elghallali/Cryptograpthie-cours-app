@@ -1,4 +1,7 @@
 
+import math
+
+
 def divEc(a,b):
     return a%b, a//b 
 
@@ -33,3 +36,42 @@ def pgcd(a,b):
 def bezout(a,b):
     u,v = algorithme_euclide_etendu(a,b)[0][-2:]
     return u, v 
+
+def primeNumber(a):
+    sqrt_a = math.sqrt(a)
+    for i in range(2,int(sqrt_a+1)):
+        if a%i ==0:
+            return False
+    return True
+
+def primeNumbersLessThan(a):
+    prime_numbers = []
+    for i in range(2,a+1):
+        if primeNumber(i) == True:
+            prime_numbers.append(i)
+    return prime_numbers
+
+def divisors(a):
+    divisors = []
+    for i in range(1,a+1):
+        if a%i == 0:
+            divisors.append(i)
+    return divisors
+
+
+def decomposition(n):
+    pn = primeNumbersLessThan(n)
+    q = n
+    com = {}
+    com_list = []
+    while(q > 1):
+        for i in pn:
+            while( q%i == 0):
+                com_list.append((q,i))
+                if i in com.keys():
+                    com[i] += 1
+                else:
+                    com[i] = 1
+                q = q//i
+    com_tuple = [(k, v) for k, v in com.items()]
+    return com_list,com_tuple
