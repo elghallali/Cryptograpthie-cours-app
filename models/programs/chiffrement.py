@@ -10,7 +10,7 @@ alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 ###                             Cryptage Affine                             ###
 ###                                                                         ###
 ###############################################################################
-def affine_crypt(a,k,message,paquet=1):
+def affine_crypt(a,k,message,option,paquet=1):
     if paquet == 1:
         if pgcd(a,26) == 1:
             result = ''
@@ -21,7 +21,7 @@ def affine_crypt(a,k,message,paquet=1):
         return f"Le nombre {a} n'admit pas un inverse dans $\\Z/26\\Z$"
     if paquet == 2:
         if pgcd(a,26) == 1:
-            message += "A"*((2 -len(message)%2)%2)
+            message += option*((2 -len(message)%2)%2)
             liste = []
             for i in range(len(message)//2):
                 liste.append(message[i*2:i*2+2])
@@ -37,7 +37,7 @@ def affine_crypt(a,k,message,paquet=1):
         return f"Le nombre {a} n'admit pas un inverse dans $\\Z/2526\\Z$"
     if paquet == 3:
         if pgcd(a,26) == 1:
-            message += "A"*((3 -len(message)%3)%3)
+            message += option*((3 -len(message)%3)%3)
             liste = []
             for i in range(len(message)//3):
                 liste.append(message[i*3:3*(i+1)])
@@ -94,7 +94,7 @@ def affine_decrypt(a,k,message,paquet=1):
 ###                           Cryptage Symétrique                           ###
 ###                                                                         ###
 ###############################################################################
-def symetrique_crypt(k,message,paquet=1):
+def symetrique_crypt(k,message,option,paquet=1):
     if paquet == 1:
         result = ''
         for char in message:
@@ -103,7 +103,7 @@ def symetrique_crypt(k,message,paquet=1):
         return result
     if paquet == 2:
         
-        message += "A"*((2 -len(message)%2)%2)
+        message += option*((2 -len(message)%2)%2)
         liste = []
         for i in range(len(message)//2):
             liste.append(message[i*2:i*2+2])
@@ -118,7 +118,7 @@ def symetrique_crypt(k,message,paquet=1):
         return '-'.join([str(i) for i in result])
 
     if paquet == 3:
-        message += "A"*((3 -len(message)%3)%3)
+        message += option*((3 -len(message)%3)%3)
         liste = []
         for i in range(len(message)//3):
             liste.append(message[i*3:3*(i+1)])

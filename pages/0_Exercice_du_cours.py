@@ -603,7 +603,13 @@ with ordina_exercice_cols[3]:
 with ordina_exercice_cols[4]:
     numberC = st.number_input("**$\\text{Entrer la valeur de c:}$**", step=1, value=None)
 
-message = st.text_input("**$\\text{Enter le message:}$**").upper()
+ord_exercice_cols = st.columns([5,1])
+with ord_exercice_cols[0]:
+    message = st.text_input("**$\\text{Enter le message:}$**").upper()
+with ord_exercice_cols[1]:
+    option = st.selectbox(
+    'Sélctionné A ou Z pour compléte',
+    ('A', 'Z'))
 
 test_cols = st.columns([1,1,2,1,1])
 with test_cols[0]:
@@ -723,7 +729,7 @@ if crypto_symetrique_button:
 
 <center>
 
-#### {symetrique_crypt(numberK,message,paquet)}
+#### {symetrique_crypt(numberK,message,option,paquet)}
 
 <center>
 
@@ -749,7 +755,7 @@ if crypto_affine_button:
     st.markdown(f"""
 <center>
                 
-#### {affine_crypt(numberA,numberK,message,paquet)}
+#### {affine_crypt(numberA,numberK,message,option,paquet)}
 
 </center>
 """, unsafe_allow_html=True)
