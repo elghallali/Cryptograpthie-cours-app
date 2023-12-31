@@ -603,12 +603,12 @@ with ordina_exercice_cols[3]:
 with ordina_exercice_cols[4]:
     numberC = st.number_input("**$\\text{Entrer la valeur de c:}$**", step=1, value=None)
 
-ord_exercice_cols = st.columns([5,1])
+ord_exercice_cols = st.columns([2,1])
 with ord_exercice_cols[0]:
     message = st.text_input("**$\\text{Enter le message:}$**").upper()
 with ord_exercice_cols[1]:
     option = st.selectbox(
-    'Sélctionné A ou Z pour compléte',
+    "**$\\text{Sélctionné A ou Z}$**",
     ('A', 'Z'))
 
 test_cols = st.columns([1,1,2,1,1])
