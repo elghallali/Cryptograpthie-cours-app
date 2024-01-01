@@ -20,7 +20,7 @@ def affine_crypt(a,k,message,option,paquet=1):
             return result
         return f"Le nombre {a} n'admit pas un inverse dans $\\Z/26\\Z$"
     if paquet == 2:
-        if pgcd(a,26) == 1:
+        if pgcd(a,2526) == 1:
             message += option*((2 -len(message)%2)%2)
             liste = []
             for i in range(len(message)//2):
@@ -36,7 +36,7 @@ def affine_crypt(a,k,message,option,paquet=1):
             return '-'.join([str(i) for i in result])
         return f"Le nombre {a} n'admit pas un inverse dans $\\Z/2526\\Z$"
     if paquet == 3:
-        if pgcd(a,26) == 1:
+        if pgcd(a,252526) == 1:
             message += option*((3 -len(message)%3)%3)
             liste = []
             for i in range(len(message)//3):
