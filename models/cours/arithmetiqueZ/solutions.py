@@ -210,7 +210,7 @@ $\\text{Écrivons la division Euclidienne de 121 par 7, }$ $\\text{de 17 par 2 e
        st.markdown(f"""
 > - ##### la division Euclidienne de {a} par {b} est:
 >
-> ${a} = {b} \\times {divEc(a,b)[1]} + {divEc(a,b)[0]} $
+> $\qquad {a} = {b} \\times {divEc(a,b)[1]} + {divEc(a,b)[0]} $
 >
 """, unsafe_allow_html=True) 
 
@@ -328,7 +328,19 @@ $\\text{Soient} \enspace a = 111 \enspace \\text{et} \enspace b = 27, \enspace \
 ###                                                                         ###
 ###############################################################################
 def solution_exercice9():
-    pass
+    st.markdown("""
+$\\text{Montrons que } \enspace PGCD(ab,ac) = a \\times PGCD(b,c).$
+
+>$\\text{Supposons que} \enspace PGCD(ac,ab)= d $ $\implies \exist (u,v) \in \\Z , \enspace (a.c).u+(a.b).v = d \implies a \\times (b.u + c.v) $
+>
+> $\\text{Proposons que} \enspace b.u + c.v = k \enspace$ $\\text{d'après Bezout on a:} \enspace$ $PGCD(b,c)= k \implies PGCD(ab,ac) = a \\times PGCD(b,c)$
+>
+>
+>
+>
+>
+>
+""")
 
 
 

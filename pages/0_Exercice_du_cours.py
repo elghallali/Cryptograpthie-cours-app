@@ -629,12 +629,12 @@ with test_cols2[0]:
 with test_cols2[1]:
     decrypt_affine_button = st.button("$\\text{Decrypter Affine}$", use_container_width=True)
 with test_cols2[2]:
-    crypto_symetrique_button = st.button("$\\text{Crypter Symétrique}$", use_container_width=True)
+    crypto_symetrique_button = st.button("$\\text{Crypter César}$", use_container_width=True)
 
 
 test_cols3 = st.columns([1,1,1])
 with test_cols3[0]:
-    decrypt_symetrique_button = st.button("$\\text{Decrypter Symétrique}$",use_container_width=True)
+    decrypt_symetrique_button = st.button("$\\text{Decrypter César}$",use_container_width=True)
 with test_cols3[1]:
     crypto_puissance_button = st.button("$\\text{Crypter Puissance}$", use_container_width=True)
 with test_cols3[2]:
