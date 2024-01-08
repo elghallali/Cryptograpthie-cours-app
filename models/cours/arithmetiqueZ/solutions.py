@@ -336,10 +336,6 @@ $\\text{Montrons que } \enspace PGCD(ab,ac) = a \\times PGCD(b,c).$
 > $\\text{Proposons que} \enspace b.u + c.v = k \enspace$ $\\text{d'après Bezout on a:} \enspace$ $PGCD(b,c)= k \implies PGCD(ab,ac) = a \\times PGCD(b,c)$
 >
 >
->
->
->
->
 """)
 
 
@@ -351,7 +347,12 @@ $\\text{Montrons que } \enspace PGCD(ab,ac) = a \\times PGCD(b,c).$
 ###                                                                         ###
 ###############################################################################
 def solution_exercice10():
-    pass
+    st.markdown("""
+###### $\\text{Le Lemme de Gauss:}$
+                
+$\qquad \\text{Montrons que si} \enspace  a \, | \, bc \enspace \\text{et} \enspace PGCD(a,b) = 1, \enspace \\text{alors} \enspace a \, | \, c.$
+""")
+    
 
 
 
@@ -361,8 +362,30 @@ def solution_exercice10():
 ###                                                                         ###
 ###############################################################################
 def solution_exercice11():
-    pass
+    st.markdown("""
+                <style>
+      tr th:first-child {
+                display: none;
+                visibility:hidden;
+            }          
+</style>
+                
+##### $\\text{Calculons les PGCD suivants:}$
 
+""",unsafe_allow_html=True)
+    i = 1
+    for a,b in [(46328, 12379), (42098,34345), (4567, 11111111111111), (34860,4853), (30076,12669)]:
+        if i > 1:
+            st.divider()
+        st.markdown(f"""###### ${i}. \quad PGCD({a}, {b}):$""")
+        st.markdown("""- $\\text{Algorithme d'Euclide Étendu:}$""")
+        df = pd.DataFrame(algorithme_euclide_etendu(a,b), columns=["a","b","r","q","u","v"])
+        algo_cols = st.columns([1,4,1])
+        with algo_cols[1]:
+            st.table(df)
+        st.markdown("""- $\\text{Le PGCD:}$""")
+        st.markdown(f"""$\qquad Le \, PGCD({a},{b}) = {pgcd(a,b)}$""")
+        i += 1
 
 ###############################################################################
 ###                                                                         ###
@@ -380,7 +403,32 @@ def solution_exercice12():
 ###                                                                         ###
 ###############################################################################
 def solution_exercice13():
-    pass
+    st.markdown("""
+$\\text{Dites si les assertions suivantes }$ $\\text{sont vraies ou fausses:}$
+
+>
+> $1. \quad 15 \enspace \\text{est divisible par} \enspace 5$
+>
+> $\qquad \quad \\text{On a:} \enspace 15 = 5 \\times 3 \implies 15 \enspace \\text{est divisible par} \enspace 5 \implies \\text{est vraie}$
+>
+>
+> $2. \quad 6 \enspace \\text{divise} \enspace 24$
+>
+> $\qquad \quad \\text{On a:} \enspace 6 \\times 4 = 24 \implies 6 \enspace \\text{divise} \enspace 24 \implies \\text{est vraie}$
+>
+> $3. \quad 12 \enspace \\text{est un multiple de} \enspace 24$
+>
+> $\qquad \quad \\text{On a:} \enspace 12 = 24 \\times 0 + 12 \implies 12 \enspace \\text{n'est pas un multiple de} \enspace 24 \implies \\text{est fausse}$
+>
+> $4. \quad 42 \enspace \\text{est divisible par} \enspace 7$
+>
+> $\qquad \quad \\text{On a:} \enspace 42 = 7 \\times 6 \implies 42 \enspace \\text{est divisible par} \enspace 7 \implies \\text{est vraie}$
+>
+> $5. \quad 18 \enspace \\text{est un multiple de} \enspace 6$
+>
+> $\qquad \quad \\text{On a:} \enspace 18 = 6 \\times 3 \implies 18 \enspace \\text{est un multiple de} \enspace 6 \implies \\text{est vraie}$
+>
+""")
 
 
 ###############################################################################
@@ -399,7 +447,36 @@ def solution_exercice14():
 ###                                                                         ###
 ###############################################################################
 def solution_exercice15():
-    pass
+    st.markdown("""
+$\\text{Soit} \enspace n \enspace \\text{un entier, montrons que} \enspace 6 \, | \, n(n+1)(n+2).$
+                
+> - $n \equiv 0[6]:$
+>
+> $\qquad \\text{On a: } n \equiv 0[6] \implies n(n+1)(n+2) \equiv 0[6] \implies 6 \, | \, n(n+1)(n+2)$
+>
+> - $n \equiv 1[6]:$
+>
+> $\qquad \\text{On a: } n \equiv 1[6] \implies n+1 \equiv 2[6] \implies n+2 \equiv 3[6] \implies n(n+1)(n+2) \equiv 6[6] \equiv 0[6] \implies 6 \, | \, n(n+1)(n+2)$
+>
+> - $n \equiv 2[6]:$
+>
+> $\qquad \\text{On a: } n \equiv 2[6] \implies n+1 \equiv 3[6] \implies n+2 \equiv 4[6] \implies n(n+1)(n+2) \equiv 24[6] \equiv 0[6] \implies 6 \, | \, n(n+1)(n+2)$
+>
+> - $n \equiv 3[6]:$
+>
+> $\qquad \\text{On a: } n \equiv 3[6] \implies n+1 \equiv 4[6] \implies n+2 \equiv 5[6] \implies n(n+1)(n+2) \equiv 60[6] \equiv 0[6] \implies 6 \, | \, n(n+1)(n+2)$
+>
+> - $n \equiv 4[6]:$
+>
+> $\qquad \\text{On a: } n \equiv 4[6] \implies n+1 \equiv 5[6] \implies n+2 \equiv 0[6] \implies n(n+1)(n+2) \equiv 0[6] \implies 6 \, | \, n(n+1)(n+2)$
+>
+> - $n \equiv 5[6]:$
+>
+> $\qquad \\text{On a: } n \equiv 5[6] \implies n+1 \equiv 0[6] \implies n+2 \equiv 1[6] \implies n(n+1)(n+2) \equiv 0[6] \implies 6 \, | \, n(n+1)(n+2)$
+>
+>
+>
+""")
 
 
 

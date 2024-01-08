@@ -143,7 +143,7 @@ $\\text{Il a 5 cousins. combien doit-il appeler de }$ $\\text{cousins pour qu'il
 
 def exercice15():
     st.markdown("""
-$\\text{Soit} \enspace n \\text{un entier, montrez que} \enspace 6 \, | \, n(n+1)(n+2).$
+$\\text{Soit} \enspace n \enspace \\text{un entier, montrez que} \enspace 6 \, | \, n(n+1)(n+2).$
 """)
 
 

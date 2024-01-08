@@ -9,7 +9,7 @@ from models.cours.arithmetiqueModulaire.exercices import *
 from models.cours.arithmetiqueZ.exercices import *
 from models.cours.chiffrementAffine.exercices import *
 from models.cours.chiffrementPuissance.exercices import *
-from models.cours.cryptographieSymetrique.exercices import *
+from models.cours.cryptographieCesar.exercices import *
 from models.cours.exercices import *
 
 ################################################################
@@ -21,7 +21,7 @@ from models.cours.arithmetiqueModulaire.solutions import *
 from models.cours.arithmetiqueZ.solutions import *
 from models.cours.chiffrementAffine.solutions import *
 from models.cours.chiffrementPuissance.solutions import *
-from models.cours.cryptographieSymetrique.solutions import *
+from models.cours.cryptographieCesar.solutions import *
 from models.cours.solutions import *
 
 from models.programs.arithmetique import *
@@ -429,11 +429,11 @@ if st.session_state.Exercice_modulaire5:
 
 ###############################################################################
 ###                                                                         ###
-###                         Cryptographie symétrique                        ###
+###                            Cryptographie Cesar                          ###
 ###                                                                         ###
 ###############################################################################
 st.divider()
-st.header('Cryptographie symétrique:')
+st.header('Cryptographie César:')
 col_cryptographie_symetrique = st.columns(5)
 for i in range(2):
         with col_cryptographie_symetrique[i]:
