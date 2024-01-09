@@ -6,7 +6,7 @@ from models.programs.arithmetique import *
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 1 du Arithmétiqyue de Z             ###
+###              Solution de l'exercice 1 du Arithmétique de Z              ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice1():
@@ -72,7 +72,7 @@ $\\text{et: } \enspace b \, | \, a \implies a = b \\times k', \enspace (k' \in \
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 2 du Arithmétiqyue de Z             ###
+###              Solution de l'exercice 2 du Arithmétique de Z              ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice2():
@@ -146,7 +146,7 @@ $\\text{plus petits que 30 est:}$ $\{2,3,5,7,11,13,17,19,23,29\}$
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 3 du Arithmétiqyue de Z             ###
+###              Solution de l'exercice 3 du Arithmétique de Z              ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice3():
@@ -199,7 +199,7 @@ $\\text{Écrivons la DFP (Décomposition en }$ $\\text{facteur premier) de 121, 
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 4 du Arithmétiqyue de Z             ###
+###              Solution de l'exercice 4 du Arithmétique de Z              ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice4():
@@ -218,7 +218,7 @@ $\\text{Écrivons la division Euclidienne de 121 par 7, }$ $\\text{de 17 par 2 e
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 5 du Arithmétiqyue de Z             ###
+###              Solution de l'exercice 5 du Arithmétique de Z              ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice5():
@@ -245,7 +245,7 @@ $\\text{Calculons le PGCD de 15 et 35.} $
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 6 du Arithmétiqyue de Z             ###
+###              Solution de l'exercice 6 du Arithmétique de Z              ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice6():
@@ -273,7 +273,7 @@ $\\text{Montrons que 32 et 7 sont premiers entre eux.}$
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 7 du Arithmétiqyue de Z             ###
+###              Solution de l'exercice 7 du Arithmétique de Z              ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice7():
@@ -295,7 +295,7 @@ $\\text{Montrons que si PGCD(a,b) = d alors} \enspace \\cfrac{a}{d} \enspace $ $
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 8 du Arithmétiqyue de Z             ###
+###              Solution de l'exercice 8 du Arithmétique de Z              ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice8():
@@ -324,7 +324,7 @@ $\\text{Soient} \enspace a = 111 \enspace \\text{et} \enspace b = 27, \enspace \
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 9 du Arithmétiqyue de Z             ###
+###              Solution de l'exercice 9 du Arithmétique de Z              ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice9():
@@ -343,7 +343,7 @@ $\\text{Montrons que } \enspace PGCD(ab,ac) = a \\times PGCD(b,c).$
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 10 du Arithmétiqyue de Z            ###
+###              Solution de l'exercice 10 du Arithmétique de Z             ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice10():
@@ -358,7 +358,7 @@ $\qquad \\text{Montrons que si} \enspace  a \, | \, bc \enspace \\text{et} \ensp
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 11 du Arithmétiqyue de Z            ###
+###              Solution de l'exercice 11 du Arithmétique de Z             ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice11():
@@ -389,7 +389,7 @@ def solution_exercice11():
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 12 du Arithmétiqyue de Z            ###
+###              Solution de l'exercice 12 du Arithmétique de Z             ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice12():
@@ -399,7 +399,7 @@ def solution_exercice12():
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 13 du Arithmétiqyue de Z            ###
+###              Solution de l'exercice 13 du Arithmétique de Z             ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice13():
@@ -433,7 +433,7 @@ $\\text{Dites si les assertions suivantes }$ $\\text{sont vraies ou fausses:}$
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 14 du Arithmétiqyue de Z            ###
+###              Solution de l'exercice 14 du Arithmétique de Z             ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice14():
@@ -443,7 +443,7 @@ def solution_exercice14():
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 15 du Arithmétiqyue de Z            ###
+###              Solution de l'exercice 15 du Arithmétique de Z             ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice15():
@@ -482,16 +482,87 @@ $\\text{Soit} \enspace n \enspace \\text{un entier, montrons que} \enspace 6 \, 
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 16 du Arithmétiqyue de Z            ###
+###              Solution de l'exercice 16 du Arithmétique de Z             ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice16():
-    pass
+    question = ''
+    
+    st.markdown("""
+<style>
+      tr th:first-child {
+                display: none;
+                visibility:hidden;
+            }          
+</style>
+                
+###### $\\text{Résoudrons les équations suivantes:}$
+                
+$1. \quad 2x + 5y = 3$
+""",unsafe_allow_html=True)
+    st.markdown("""- $\quad \\text{Algorithme d'Euclide Étendu:}$""")
+    df = pd.DataFrame(algorithme_euclide_etendu(2,5), columns=["a","b","r","q","u","v"])
+    algo_cols = st.columns([1,4,1])
+    with algo_cols[1]:
+        st.table(df)
+    st.markdown("""- $\quad \\text{L'identité de Bézout:}$""")
+    st.write(f"$\qquad \quad {2} \\times u {' + '+ str(5)} \\times v = 2 \\times {bezout(2,5)[0] if bezout(2,5)[0] >= 0 else '('+str(bezout(2,5)[0])+')'} {' + '+ str(5) } \\times {bezout(2,5)[1] if bezout(2,5)[1] >= 0 else '('+str(bezout(2,5)[1])+')'} = {str(abs(pgcd(2,5)))}$")
+    st.markdown("""
+$\\text{On a:} \enspace 2 \\times (-2) +5 \\times 1 = 1 $ $\implies 3 \\times (2 \\times (-2) +5 \\times 1) = 3 \\times 1 $
+                
+$\implies 2 \\times (-6) + 5 \\times 3 = 3  $ $\implies 2x + 5y = 2 \\times (-6) + 5 \\times 3$
+                
+$\implies 2 \\times(x - 6)  = - 5 \\times (y +3) $ $\implies 2 \, | \, -5(y+3) \enspace \\text{et} \enspace PGCD(2,5) = 1$
+                
+$\implies \\text{D'après Le Lemme de Gauss on a:} \enspace $ $2 \, | \, (y+3) $ $\implies y+3 = 2k \enspace (k \in \\Z) $ $\implies y = 2k -3$
+
+$\\text{On a:} \enspace 2 \\times(x - 6)  = - 5 \\times (y +3) \enspace \\text{et} \enspace y+3 = 2k \enspace \\text{on remplaçons} \enspace y+3$
+                
+$\implies 2 \\times(x - 6)  = - 5 \\times 2k \implies x - 6 = -5k \implies x = -5k + 6$
+                
+$\\text{Donc} \enspace (x,y) = (-5k + 6,2k -3)$
+                
+---
+                
+$2. \quad 323x - 391y = 612$
+""")
+    st.markdown("""- $\quad \\text{Algorithme d'Euclide Étendu:}$""")
+    df = pd.DataFrame(algorithme_euclide_etendu(323,-391), columns=["a","b","r","q","u","v"])
+    algo_cols = st.columns([1,4,1])
+    with algo_cols[1]:
+        st.table(df)
+    st.markdown("""- $\quad \\text{L'identité de Bézout:}$""")
+    st.write(f"$\qquad \quad {323} \\times u {' + '+ str(-391) if -391 >= 0 else -391} \\times v = {323} \\times {bezout(323,-391)[0] if bezout(323,-391)[0] >= 0 else '('+str(bezout(323,-391)[0])+')'} {' + '+ str(-391) if -391 >= 0 else -391} \\times {bezout(323,-391)[1] if bezout(323,-391)[1] >= 0 else '('+str(bezout(323,-391)[1])+')'} = {str(abs(pgcd(323,-391)))}$")
+
+
+    st.markdown("""
+---
+$3. \quad 162x + 207y = 27$
+                                
+- $\quad \\text{Algorithme d'Euclide Étendu:}$""")
+    df = pd.DataFrame(algorithme_euclide_etendu(162,207), columns=["a","b","r","q","u","v"])
+    algo_cols = st.columns([1,4,1])
+    with algo_cols[1]:
+        st.table(df)
+    st.markdown("""- $\quad \\text{L'identité de Bézout:}$""")
+    st.write(f"$\qquad \quad {162} \\times u {' + '+ str(207) if 207 >= 0 else 207} \\times v = {162} \\times {bezout(162,207)[0] if bezout(162,207)[0] >= 0 else '('+str(bezout(162,207)[0])+')'} {' + '+ str(207) if 207 >= 0 else 207} \\times {bezout(162,207)[1] if bezout(162,207)[1] >= 0 else '('+str(bezout(162,207)[1])+')'} = {str(abs(pgcd(162,207)))}$")
+    st.markdown("""                  
+---
+                                    
+$4. \quad 221x + 247y = 15$
+""")
+    df = pd.DataFrame(algorithme_euclide_etendu(221,247), columns=["a","b","r","q","u","v"])
+    algo_cols = st.columns([1,4,1])
+    with algo_cols[1]:
+        st.table(df)
+    st.markdown("""- $\quad \\text{L'identité de Bézout:}$""")
+    st.write(f"$\qquad \quad {221} \\times u {' + '+ str(247) if 247 >= 0 else 247} \\times v = {221} \\times {bezout(221,247)[0] if bezout(221,247)[0] >= 0 else '('+str(bezout(221,247)[0])+')'} {' + '+ str(247) if 247 >= 0 else 247} \\times {bezout(221,247)[1] if bezout(221,247)[1] >= 0 else '('+str(bezout(221,247)[1])+')'} = {str(abs(pgcd(221,247)))}$")
+
 
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 17 du Arithmétiqyue de Z            ###
+###              Solution de l'exercice 17 du Arithmétique de Z             ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice17():
@@ -501,7 +572,7 @@ def solution_exercice17():
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 18 du Arithmétiqyue de Z            ###
+###              Solution de l'exercice 18 du Arithmétique de Z             ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice18():
@@ -510,7 +581,7 @@ def solution_exercice18():
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 19 du Arithmétiqyue de Z            ###
+###              Solution de l'exercice 19 du Arithmétique de Z             ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice19():
@@ -521,7 +592,7 @@ def solution_exercice19():
 
 ###############################################################################
 ###                                                                         ###
-###              Solution de l'exercice 20 du Arithmétiqyue de Z            ###
+###              Solution de l'exercice 20 du Arithmétique de Z             ###
 ###                                                                         ###
 ###############################################################################
 def solution_exercice20():
