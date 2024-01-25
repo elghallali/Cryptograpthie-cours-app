@@ -1,5 +1,6 @@
 
 from models.programs.arithmetique import bezout, pgcd
+import streamlit as st
 
 
 alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -196,3 +197,95 @@ def puissance_decrypt(a,k,c,message):
             return result
         return f"Le nombre {c} n'admit pas un inverse dans $\\Z/12\\Z$"
     return f"Le nombre {a} n'admit pas un inverse dans $\\Z/26\\Z$"
+
+
+
+###############################################################################
+###                                                                         ###
+###                           Cryptage César                                ###
+###                                                                         ###
+###############################################################################
+def cesar_cryptage(k,message,option,paquet=1):
+    if paquet == 1:
+        result = []
+        for char in message:
+            i = alphabet.index(char)
+            ik = i + k
+            ik26 = ik%26
+            char_crypt = alphabet[ik26]
+            result.append([char, i, ik, ik26, char_crypt])
+        return result
+    if paquet == 2:
+        message += option*((2 -len(message)%2)%2)
+        liste = []
+        for i in range(len(message)//2):
+            liste.append(message[i*2:i*2+2])
+        liste2 = []
+        for i in liste:
+            res = [char for char in i]
+            liste2.append(res)
+        a = [[alphabet.index(k) for k in i] for i in liste2]
+        b =[i[0] * 100 + i[1] for i in a]
+        ik = [i+k for i in b]
+        result = [(i%2526) for i in ik]
+
+        return [[char, i, ik_, ik2526, res] for char, i, ik_, ik2526,res in zip(liste, b, ik, result,result)]
+
+    if paquet == 3:
+        message += option*((3 -len(message)%3)%3)
+        liste = []
+        for i in range(len(message)//3):
+            liste.append(message[i*3:3*(i+1)])
+        liste2 = []
+        for i in liste:
+            res = [char for char in i]
+            liste2.append(res)
+        a = [[alphabet.index(k) for k in i] for i in liste2]
+        b =[i[0] * 10000 + i[1]*100 + i[2] for i in a]
+        ik = [i+k for i in b]
+        result = [(i%252526) for i in ik]
+
+        return [[char, i, ik_, ik2526, res] for char, i, ik_, ik2526,res in zip(liste, b, ik, result,result)]
+    
+
+###############################################################################
+###                                                                         ###
+###                          Décryptage César                               ###
+###                                                                         ###
+###############################################################################
+def cesar_decryptage(k,message,paquet):
+    if paquet == 1:
+        result = []
+        for char in message:
+            i = alphabet.index(char)
+            ik = i-k
+            ik26 = ik%26
+            char_decrypt = alphabet[ik26]
+            result.append([char, i, ik, ik26, char_decrypt])
+        return result
+    if paquet == 2:
+        message_liste = message.split('-')
+        message_liste_to_int = [int(i) for i in message_liste]
+        ik = [i-k for i in message_liste_to_int]
+        b = [(i%2526) for i in ik]
+        b_index_char = [[i//100,i%100] for i in b]
+        b_index_char_str = [[str(j) for j in i] for i in b_index_char]
+        b_q = ['-'.join(i) for i in b_index_char_str]
+        char_list = [[alphabet[k] for k in i] for i in  b_index_char]
+        groupBy2 = ['-'.join(i) for i in char_list]
+        group =  [''.join(i) for i in char_list] 
+        return [[part, i, ik_,b2, gro2, res] for part, i, ik_,b2, gro2,res in zip(message_liste, ik, b, b_q,groupBy2,group)]
+    
+    if paquet == 3:
+        message_liste = message.split('-')
+        message_liste_to_int = [int(i) for i in message_liste]
+        ik = [i-k for i in message_liste_to_int]
+        b = [((i-k)%252526) for i in message_liste_to_int]
+        b_index_char = [[i//10000,(i%10000)//100,(i%10000)%100] for i in b]
+        b_index_char_str = [[str(j) for j in i] for i in b_index_char]
+        b_q = ['-'.join(i) for i in b_index_char_str]
+        char_list = [[alphabet[k] for k in i] for i in  b_index_char]
+        groupBy2 = ['-'.join(i) for i in char_list]
+        group =  [''.join(i) for i in char_list]
+        return [[part, i, ik_,b2, gro2, res] for part, i, ik_,b2, gro2,res in zip(message_liste, ik, b, b_q,groupBy2,group)]
+    

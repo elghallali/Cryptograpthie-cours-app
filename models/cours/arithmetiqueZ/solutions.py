@@ -437,7 +437,34 @@ $\\text{Dites si les assertions suivantes }$ $\\text{sont vraies ou fausses:}$
 ###                                                                         ###
 ###############################################################################
 def solution_exercice14():
-    pass
+    st.markdown("""
+##### $\\text{Un partage de bonbon pas très équitable: }$
+
+- $\\text{L'appelation de 0 cousin} \implies \\text{le partage sur } 3:$
+                
+$\qquad \quad 73 = 3 \\times 24 + 1 \implies \\text{Le reste est } 1$
+                
+- $\\text{L'appelation de 1 cousin} \implies \\text{le partage sur } 4:$
+                
+$\qquad \quad 73 = 4 \\times 18 + 1 \implies \\text{Le reste est } 1$
+                
+- $\\text{L'appelation de 2 cousins} \implies \\text{le partage sur } 5:$
+                
+$\qquad \quad 73 = 5 \\times 14 + 3 \implies \\text{Le reste est } 3$
+                
+- $\\text{L'appelation de 3 cousins} \implies \\text{le partage sur } 6:$
+                
+$\qquad \quad 73 = 6 \\times 12 + 1 \implies \\text{Le reste est } 1$
+                
+- $\\text{L'appelation de 4 cousins} \implies \\text{le partage sur } 7:$
+                
+$\qquad \quad 73 = 7 \\times 10 + 3 \implies \\text{Le reste est } 3$
+                
+- $\\text{L'appelation de 5 cousins} \implies \\text{le partage sur } 8:$
+                
+$\qquad \quad 73 = 8 \\times 9 + 1 \implies \\text{Le reste est } 1$
+                
+""")
 
 
 
@@ -512,15 +539,15 @@ $\\text{On a:} \enspace 2 \\times (-2) +5 \\times 1 = 1 $ $\implies 3 \\times (2
                 
 $\implies 2 \\times (-6) + 5 \\times 3 = 3  $ $\implies 2x + 5y = 2 \\times (-6) + 5 \\times 3$
                 
-$\implies 2 \\times(x - 6)  = - 5 \\times (y +3) $ $\implies 2 \, | \, -5(y+3) \enspace \\text{et} \enspace PGCD(2,5) = 1$
+$\implies 2 \\times(x + 6)  = - 5 \\times (y - 3) $ $\implies 2 \, | \, -5(y-3) \enspace \\text{et} \enspace PGCD(2,5) = 1$
                 
-$\implies \\text{D'après Le Lemme de Gauss on a:} \enspace $ $2 \, | \, (y+3) $ $\implies y+3 = 2k \enspace (k \in \\Z) $ $\implies y = 2k -3$
+$\implies \\text{D'après Le Lemme de Gauss on a:} \enspace $ $2 \, | \, (y-3) $ $\implies y-3 = 2k \enspace (k \in \\Z) $ $\implies y = 2k +3$
 
-$\\text{On a:} \enspace 2 \\times(x - 6)  = - 5 \\times (y +3) \enspace \\text{et} \enspace y+3 = 2k \enspace \\text{on remplaçons} \enspace y+3$
+$\\text{On a:} \enspace 2 \\times(x + 6)  = - 5 \\times (y -3) \enspace \\text{et} \enspace y-3 = 2k \enspace \\text{on remplaçons} \enspace y-3$
                 
-$\implies 2 \\times(x - 6)  = - 5 \\times 2k \implies x - 6 = -5k \implies x = -5k + 6$
+$\implies 2 \\times(x + 6)  = - 5 \\times 2k \implies x + 6 = -5k \implies x = -5k - 6$
                 
-$\\text{Donc} \enspace (x,y) = (-5k + 6,2k -3)$
+$\\text{Donc} \enspace (x,y) = (-5k - 6, \, 2k +3) \enspace \\forall k \in \\Z$
                 
 ---
                 
@@ -536,6 +563,9 @@ $2. \quad 323x - 391y = 612$
 
 
     st.markdown("""
+$\\text{On a:} \enspace 323 \\times (-6) -391 \\times (-5) = 17 $ $\implies 19 \\times (-6) - 23 \\times (-5) =1 \enspace $ 
+$\\text{et} \enspace 36 \\times (323 \\times (-6) -391 \\times (-5)) = 612$               
+
 ---
 $3. \quad 162x + 207y = 27$
                                 
