@@ -32,54 +32,43 @@ st.markdown("""
 ###                                                                         ###
 ###############################################################################
 st.divider()
-ordina_exercice_cols = st.columns(5)
+st.markdown("""
+    <div class="main-title">
+     
+    ## Arithméthique de $\\Z$
+    
+    </div>
+    <br><br>
+""",unsafe_allow_html=True)
+ordina_exercice_cols = st.columns([1,1,1,2])
 with ordina_exercice_cols[0]:
-    numberA = st.number_input("**$\\text{Entrer la valeur de a:}$**",step=1, value=None)
+    numberA = st.number_input("**$\\text{Entrer la valeur de a:}$**",step=1)
 with ordina_exercice_cols[1]:
-    numberB = st.number_input("**$\\text{Entrer la valeur de n:}$**", step=1, value=None)
+    numberB = st.number_input("**$\\text{Entrer la valeur de n ou b:}$**", step=1)
 with ordina_exercice_cols[2]:
-    paquet = st.number_input("**$\\text{Entrer la valeur de paquet:}$**",step=1,min_value=1,max_value=3, value=1)
+    numberE = st.number_input("**$\\text{Entrer la valeur de e:}$**", step=1, min_value=1)
 with ordina_exercice_cols[3]:
-    numberK = st.number_input("**$\\text{Entrer la valeur de k:}$**", step=1, value=None)
-with ordina_exercice_cols[4]:
-    numberC = st.number_input("**$\\text{Entrer la valeur de c:}$**", step=1, value=None)
+    product_modulo = st.text_input("Entrer des nombres sparé avec (-)",key='product_modulo')
 
-ord_exercice_cols = st.columns([2,1])
-with ord_exercice_cols[0]:
-    message = st.text_input("**$\\text{Enter le message:}$**").upper()
-with ord_exercice_cols[1]:
-    option = st.selectbox(
-    "**$\\text{Sélctionné A ou Z1}$**",
-    ('A', 'Z'))
 
-test_cols = st.columns([1,1,2,1,1])
+test_cols = st.columns([1,1,2])
 with test_cols[0]:
     pgcd_button = st.button("$\\text{PGCD}$", use_container_width=True)
 with test_cols[1]:
     bezout_button = st.button("$\\text{Bezout}$",use_container_width=True)
 with test_cols[2]:
     algorithme_euclide_etendu_button = st.button("$\\text{Algorithme d'Euclide Étendu}$", use_container_width=True)
-with test_cols[3]:
+
+
+test_cols_2 = st.columns([1,1,1,1])
+with test_cols_2[0]:
     decomposition_button = st.button("$\\text{Decomposition}$", use_container_width=True)
-with test_cols[4]:
+with test_cols_2[1]:
     nombres_premiers_button = st.button("$\\text{Nombres Premiers}$", use_container_width=True)
-
-test_cols2 = st.columns([1,1,1])
-with test_cols2[0]:
-    crypto_affine_button = st.button("$\\text{Crypter Affine}$", use_container_width=True)
-with test_cols2[1]:
-    decrypt_affine_button = st.button("$\\text{Decrypter Affine}$", use_container_width=True)
-with test_cols2[2]:
-    crypto_symetrique_button = st.button("$\\text{Crypter César1}$", use_container_width=True)
-
-
-test_cols3 = st.columns([1,1,1])
-with test_cols3[0]:
-    decrypt_symetrique_button = st.button("$\\text{Decrypter César1}$",use_container_width=True)
-with test_cols3[1]:
-    crypto_puissance_button = st.button("$\\text{Crypter Puissance}$", use_container_width=True)
-with test_cols3[2]:
-    decrypt_puissance_button = st.button("$\\text{Decrypter Puissance}$", use_container_width=True)
+with test_cols_2[2]:
+    puissance_modulo_button = st.button("$\\text{Puissance modulo}$", use_container_width=True)
+with test_cols_2[3]:
+    product_modulo_button = st.button("$\\text{Produit modulo}$", use_container_width=True)
 
 if pgcd_button:
     st.markdown("""- $\\text{Le PGCD:}$""")
@@ -166,73 +155,58 @@ if nombres_premiers_button:
 </div>
 """,unsafe_allow_html=True)
 
-if crypto_symetrique_button:
-    st.markdown("""- $\\text{Le message crypté est:}$""")
+if puissance_modulo_button:
+    puissance_modulo = modular_exponentiation(numberA, numberE, numberB)
+    numberE_text = '{' + str(numberE) + '}'
+    number = f'{numberA}^{numberE_text}' if numberE != 1 else f'{numberA}'
     st.markdown(f"""
-
+<br>
 <center>
 
-#### {symetrique_crypt(numberK,message,option,paquet)}
+${number} \equiv {puissance_modulo} [{numberB}]$ 
 
-<center>
-
-
-""", unsafe_allow_html=True)
-
-if decrypt_symetrique_button:
-    st.markdown("""- $\\text{Le message décrypté est:}$""")
+</center>                
+                """, unsafe_allow_html=True)
+    
+###############################################################################
+###                                                                         ###
+###                             Produit Modulo                              ###
+###                                                                         ###
+############################################################################### 
+if product_modulo_button:
+    liste_sum = product_modulo.split('+')
+    liste_produit = [item.split('x') for item in liste_sum]
+    produit_modulo = [modular_multiplication(item, numberB) for item in liste_produit]
+    sum_produit_modulo = sum(produit_modulo) % numberB
+    total = f''
+    if len(liste_sum) == 1:
+        produit = f'{liste_produit[0][0]}'
+        for i in range(1,len(liste_produit[0])):
+            produit += f'\\times {liste_produit[0][i]}'
+        total += produit
+    else:
+        total = f''
+        for k in range(len(liste_sum)):
+            produit = f''
+            for i in range(len(liste_produit)):
+                if i != 0:
+                    produit += f'\\times {liste_produit[k][i]}'
+                else:
+                    produit += f'{liste_produit[k][i]}'
+            if k < (len(liste_sum)-1):
+                total += f'{produit} +'
+            else:
+                total += f'{produit}'
+    
     st.markdown(f"""
-
+<br>
 <center>
-                
-#### {symetrique_decrypt(numberK,message,paquet)}
 
-</center>
+${total} \equiv {sum_produit_modulo} [{numberB}]$ 
 
-""", unsafe_allow_html=True)
-
-
-
-if crypto_affine_button:
-    st.markdown("""- $\\text{Le message crypté est:}$""")
-    st.markdown(f"""
-<center>
-                
-#### {affine_crypt(numberA,numberK,message,option,paquet)}
-
-</center>
-""", unsafe_allow_html=True)
-
-if decrypt_affine_button:
-    st.markdown("""- $\\text{Le message décrypté est:}$""")
-    st.markdown(f"""
-<center>
-                
-#### {affine_decrypt(numberA, numberK, message, paquet)}
-
-</center>
-""",unsafe_allow_html=True)
-
-if crypto_puissance_button:
-    st.markdown("""- $\\text{Le message crypté est:}$""")
-    st.markdown(f"""
-<center>
-                
-#### {puissance_crypt(numberA,numberK,numberC,message)}
-
-</center>
-""",unsafe_allow_html=True)
-
-if decrypt_puissance_button:
-    st.markdown("""- $\\text{Le message crypté est:}$""")
-    st.markdown(f"""
-<center>
-                
-#### {puissance_decrypt(numberA,numberK,numberC,message)}
-
-</center>
-""",unsafe_allow_html=True)
-
+</center>                
+                """, unsafe_allow_html=True)
+    
 ###############################################################################
 ###                                                                         ###
 ###                             Cryptage César                              ###
@@ -322,7 +296,16 @@ tbody tr:nth-child(1) {
 {y}
 
 </center>
+<br>
 """,unsafe_allow_html=True)
+    if cesar_paquet != 1:
+        crypted_message = '-'.join([str(i[4])  for i in cesar])
+    else:
+        crypted_message = ''.join([str(i[4])  for i in cesar])
+    result = '\\text{Le message crypté du mot est '+ message_cesar  + ' par la méthode de César par paquet de ' + str(cesar_paquet) +'}$ $ \\text{avec ' +str(cesar_key) +' comme clef, est }' + crypted_message
+    st.markdown(f"""
+${result}$                  
+                    """)
 
 if cesar_decrypt:
     origin = '\\text{On a utilisé la méthode de César par paquet de }' + str(cesar_paquet) + '\\text{ avec }' + str(cesar_key) + '\\text{ comme clef pour obtenir }$ $' + message_cesar + '\\text{. On cherchons le message original}'
@@ -351,6 +334,7 @@ tbody tr:nth-child(1) {
         col3 = f'|$-{cesar_key}$|'
         col4 = '|$\\Z/26\\Z$|'
         col5 = '|$D(Y) \longrightarrow$|'
+        col6 = ''
     elif cesar_paquet == 2:
         col2 = f'|$-{cesar_key}$|'
         col3 = '|$\\Z/2526\\Z$|'
@@ -389,7 +373,16 @@ tbody tr:nth-child(1) {
     {col6}
 
     </center>
+    <br>
     """,unsafe_allow_html=True)
+    if cesar_paquet != 1:
+        original_message = ''.join([str(i[5])  for i in cesar])
+    else:
+        original_message = ''.join([str(i[4])  for i in cesar])
+    result = '\\text{Le message originale est }' + original_message
+    st.markdown(f"""
+${result}$                  
+                    """)
 ###############################################################################
 ###                                                                         ###
 ###                             Cryptage Affine                             ###
@@ -447,7 +440,82 @@ if affine_crypt:
     st.write(f"$\qquad \quad u ={bezout(affine_a,base)[0]}, \quad v ={bezout(affine_a,base)[1]}.$")
     st.markdown("""- $\\text{Le PGCD:}$""")
     st.markdown(f"$\qquad \quad Le \, PGCD({affine_a},{base}) = {abs(pgcd(affine_a,base))}$")
-    
+    st.markdown("""
+    <style>
+th {
+    display: none;
+}
+tbody tr:nth-child(1) {
+    background-color: purple;
+    color: white;
+}
+</style>
+
+""", unsafe_allow_html=True)
+    affine = affine_crypto(affine_a,affine_key,message_affine,affine_option_selected,affine_paquet)
+
+    if affine_paquet == 1:
+        base = 26
+        head= '||'
+        head_h = '|:---:|'    
+        x = '|$X \longrightarrow$|'
+        z26z = '|$\\Z/26\\Z$|'
+        plus_k = f'|${affine_a}x+{affine_key}$|'
+        z26z2 = '|$\\Z/26\\Z$|'
+        y = '|$Cr(X) \longrightarrow$|'
+    elif affine_paquet == 2:
+        base = 2526
+        head= '||'
+        head_h = '|:---:|'    
+        x = '|$X \longrightarrow$|'
+        z26z = '|$\\Z/2526\\Z$|'
+        plus_k = f'|${affine_a}x+{affine_key}$|'
+        z26z2 = '|$\\Z/2526\\Z$|'
+        y = '|$Cr(X) \longrightarrow$|'
+    elif affine_paquet == 3:
+        base = 252526
+        head= '||'
+        head_h = '|:---:|'    
+        x = '|$X \longrightarrow$|'
+        z26z = '|$\\Z/252526\\Z$|'
+        plus_k = f'|${affine_a}x+{affine_key}$|'
+        z26z2 = '|$\\Z/252526\\Z$|'
+        y = '|$Cr(X) \longrightarrow$|'
+
+
+    if pgcd(affine_a,base) == 1:
+        for i in affine:
+            head += '|'
+            head_h += ':---:|'
+            x += f'${str(i[0])}$|'
+            z26z += f'${str(i[1])}$|'
+            plus_k += f'${str(i[2])}$|'
+            z26z2 += f'${str(i[3])}$|'
+            y += f'${str(i[4])}$|'
+        st.markdown(f"""
+    <center>
+
+    {head}
+    {head_h}
+    {x}
+    {z26z}
+    {plus_k}
+    {z26z2}
+    {y}
+
+    </center>
+    <br>
+    """,unsafe_allow_html=True)
+        if affine_paquet != 1:
+            crypted_message = '-'.join([str(i[4])  for i in affine])
+        else:
+            crypted_message = ''.join([str(i[4])  for i in affine])
+        result = '\\text{Le message crypté du mot } \enspace ' + message_affine +'\enspace \\text{ par la méthode de Affine par paquet de }' + str(affine_paquet) +'\\text{ avec (}' +str(affine_a)+';' +str(affine_key) +'\\text{) comme clef, est } \enspace'+ crypted_message 
+        st.markdown(f"""
+${result}$                  
+                    """)
+    else:
+        st.markdown(affine)
 
 if affine_decrypt:
     origin = '\\text{On a utilisé la méthode de Affine par paquet de }' + str(affine_paquet) + '\\text{ avec (}'  + str(affine_a)+';' +str(affine_key)  + '\\text{) comme clef pour obtenir }$ $' + message_affine + '\\text{. On cherchons le message original}'
@@ -477,6 +545,94 @@ if affine_decrypt:
     st.write(f"$\qquad \quad u ={bezout(affine_a,base)[0]}, \quad v ={bezout(affine_a,base)[1]}.$")
     st.markdown("""- $\\text{Le PGCD:}$""")
     st.markdown(f"$\qquad \quad Le \, PGCD({affine_a},{base}) = {abs(pgcd(affine_a,base))}$")
+    
+    affine_dec = affine_decryptage(affine_a,affine_key,message_affine,affine_paquet)
+
+    if affine_paquet == 1:
+        affine_a_inverse= bezout(affine_a,base)[0]%base
+        head= '||'
+        head_h = '|:---:|'    
+        col1 = '|$Y \longrightarrow$|'
+        col2 = '|$\\Z/26\\Z$|'
+        col3 = f'|${affine_a_inverse}(y-{affine_key})$|'
+        col4 = '|$\\Z/26\\Z$|'
+        col5 = '|$D(Y) \longrightarrow$|'
+        col6 = ''
+    elif affine_paquet == 2:
+        affine_a_inverse= bezout(affine_a,base)[0]%base
+        head= '||'
+        head_h = '|:---:|'    
+        col1 = '|$Y \longrightarrow$|'
+        col2 = f'|${affine_a_inverse}(y-{affine_key})$|'
+        col3 = '|$\\Z/2526\\Z$|'
+        col4 = '||'
+        col5 = '||'
+        col6 = '|$D(Y) \longrightarrow$|' 
+    elif affine_paquet == 3:
+        affine_a_inverse= bezout(affine_a,base)[0]%base
+        head= '||'
+        head_h = '|:---:|'    
+        col1 = '|$Y \longrightarrow$|'
+        col2 = f'|${affine_a_inverse}(y-{affine_key})$|'
+        col3 = '|$\\Z/252526\\Z$|'
+        col4 = '||'
+        col5 = '||'
+        col6 = '|$D(Y) \longrightarrow$|' 
+
+
+    if pgcd(affine_a,base) == 1:
+        st.markdown("""
+    <style>
+.table th {
+    display: none;
+}
+.table tbody tr:nth-child(1) {
+    background-color: purple;
+    color: white;
+}
+</style>
+
+""", unsafe_allow_html=True)
+        for i in affine_dec:
+            head += '|'
+            head_h += ':---:|'
+            col1 += f'${str(i[0])}$|'
+            col2 += f'${str(i[1])}$|'
+            col3 += f'${str(i[2])}$|'
+            col4 += f'${str(i[3])}$|'
+            col5 += f'${str(i[4])}$|'
+            if affine_paquet != 1:
+                col6 += f'${str(i[5])}$|'
+        st.markdown(f"""
+    
+<center>
+<div class='table'>
+
+{head}
+{head_h}
+{col1}
+{col2}
+{col3}
+{col4}
+{col5}
+{col6}
+
+</div>
+    </center>
+<br>
+    """,unsafe_allow_html=True)
+        if affine_paquet != 1:
+            original_message = ''.join([str(i[5])  for i in affine_dec])
+        else:
+            original_message = ''.join([str(i[4])  for i in affine_dec])
+        result = '\\text{Le message originale est }' + original_message
+        st.markdown(f"""
+${result}$                  
+                    """)
+        
+    else:
+        st.markdown(affine_dec)
+    
 ###############################################################################
 ###                                                                         ###
 ###                             Cryptage Puissance                          ###
@@ -582,3 +738,16 @@ if hill_discrypt_button:
         matrice3 = '\\begin{pmatrix}' + str(a) +'&' + str(b)+'&' + str(c) + '\\\\' + str(d) +'&' + str(e)+'&' + str(f)+ '\\\\' + str(g) +'&' + str(h)+'&' + str(i) + '\end{pmatrix}'
         question= '\\text{On a utilisé un chiffrement de Hill de }$ $\\text{dimension }'+ str(dimension) +'\\text{ par paquet de 1, avec }$ $' + matrice3 + '\\text{ comme clef pour obtenir ' + message_hill + '. }$  $\\text{On cherchons le message claire:}'
         st.markdown(f'${question}$')
+
+
+
+###############################################################################
+###                                                                         ###
+###                             Cryptage RSA                                ###
+###                                                                         ###
+###############################################################################
+st.divider()
+st.markdown("""
+    <h2 class="main-title">Cryptage RSA</h2>
+    <br><br>
+""",unsafe_allow_html=True)

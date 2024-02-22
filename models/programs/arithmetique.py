@@ -78,3 +78,17 @@ def decomposition(n):
                 q = q//i
     com_tuple = [(k, v) for k, v in com.items()]
     return com_list,com_tuple
+
+
+def modular_exponentiation(x, e, n):
+    c = 1
+    for i in range(e):
+        c = (x * c) % n
+    return c
+
+def modular_multiplication(liste, n):
+    liste_to_int = [int(i) for i in liste]
+    c = 1
+    for i in liste_to_int:
+        c = (i * c) % n
+    return c

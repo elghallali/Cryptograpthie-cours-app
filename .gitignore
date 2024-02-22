@@ -1,2 +1,5 @@
 venv
 .streamlit/secrets.toml
+models/*/__pycache__
+models/*/*/__pycache__
+style/__pycache__

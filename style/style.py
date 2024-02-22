@@ -13,6 +13,10 @@ def style():
                 color: #091747;
             }
             
+            label {
+                font-size : 20px;
+            }
+            
             p {
                 font-family: math;
             }
