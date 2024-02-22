@@ -106,7 +106,7 @@ st.markdown(f"""
 st.latex(r"""
          \begin{equation*}
 		\begin{CD}
-			M_3 @> D(pk_b)>> M_2  @>D(sk_b)>> M_1
+			M_3 @> D(pk_b)>> M_2  @>D(sk_a)>> M_1
 		\end{CD}
 	\end{equation*}
          """)
